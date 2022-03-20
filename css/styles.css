@@ -1,0 +1,168 @@
+/* VARIABLES */
+:root{
+
+    --color-principal: #e0ff00;
+    --color-principalHover: #ffff00;
+    --color-secundario: #121212;
+    --color-rosa: #ea90ff;
+    --color-verde: #25d366;
+    --color-grisNav: rgba(208, 208, 208, .7);
+    --color-grisFondo: #f5f5f5;
+    --color-parrafos: rgba(18,18,18,.6);
+    --color-white: #fff;
+
+    --fluid-min-width: 320;
+    --fluid-max-width: 1200;
+    --fluid-screen: 100vw;
+    --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+    --f-0-min: 16.00;
+    --f-0-max: 21.00;
+}
+
+/*RESET*/
+html {
+    box-sizing: border-box;
+    color: #313131; 
+    font-size: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *var(--fluid-bp));
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0; }
+
+body {
+    margin: 0 auto;
+    width: 100vw;
+    background: black;
+    font-family: 'DM Sans', sans-serif;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; }
+
+a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; }
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none; }
+
+p {
+    margin-bottom: 0;
+    line-height: 1.3rem; }
+
+.logo{
+    width: 170px;
+}
+.contenedor{
+    width: clamp(400px, 60vw, 600px);
+}
+
+
+
+/* BANNER */
+.banner{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .7rem;
+    background-color: var(--color-rosa);
+}
+.banner p{
+    margin: 10px 0;
+}
+.banner a{
+    color: black;
+}
+.banner a:visited{
+    color: black;
+}
+.banner a:hover{
+    color: var(--color-principalHover);
+}
+
+
+
+/*MENÚ  DE  NAVEGACIÓN*/
+.navegacion{
+    position: fixed;
+    top: 90px;
+    padding: 10px 50px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.enlaces{
+    width: 400px;
+    height: 40px;
+}
+.enlaces ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.enlaces ul li{
+    margin: 0 10px;
+    width: 150px;
+    align-content: center;
+    text-align: center;
+}
+.enlaces ul li:last-child{
+    padding: 12px 22px;
+    background-color: var(--color-principal);
+}
+.enlaces ul li:last-child:hover{
+    background-color: var(--color-principalHover);
+    cursor: pointer;
+}
+.enlaces ul li:last-child a{
+    color: black;
+}
+.enlaces a{
+    font-size: .8rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* INGRESAR */
+.wrapper__registro{
+    width: 100%;
+    height: 100vh;
+}
+.wrapper__registro__formulario{
+    width: 50%;
+    background: white;
+}
+.wrapper__registro__slider{
+    width: 50%;
+}
+.contenedor__formulario{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 452px;
+    background-color: aqua;
+}
+.logo__black{
+    height: 50px;
+}

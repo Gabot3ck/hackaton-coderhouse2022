@@ -13,53 +13,50 @@
 
 // Declaración de Variables
 
-let nombreParticipante = "",
-    nombreJuez = "",
-    usuario;
-    
+let tipo = 0;
+let juez = "";
+let participante = "";
 
 
-//Declaración de funciones
-function registrar(){
-    usuario = parseInt(prompt(`Ingrese el tipo de usuario:
-    1 para Juez
-    2 para Participante`));
-    return usuario;
-}
-
-function errorVacio(){
-    while (!usuario){
-        alert("ERROR - No puede dejar la casilla vacía");
-        registrar();
+//Creación de Clases
+class Usuario{
+    constructor(tipo){
+        this.tipo = tipo;
     }
 }
 
 
-registrar();
+//Creación de Funciones
+function elegirTipo(){
+    while(!tipo || tipo == 0 || tipo > 2){
+        tipo = parseInt(prompt(`Ingrese el tipo de usuario:
+        1 para Juez
+        2 para Participante`));
 
-
-// Evaluacíon de condiciones
-do{
-
-    if (!usuario){
-        errorVacio();
-
-    } else if (usuario == 1) {                                                              
-        nombreJuez += prompt("Ingrese Nombre:").toUpperCase();
-        alert(`Bienvenid@! ${nombreJuez}, usted será parte del jurado en el Hackaton CoderHouse 2022`);
-        break;
-
-    } else if (usuario == 2){
-        for(let i=1; i<=4; i++){
-            nombreParticipante  += prompt(`Ingrese Nombre del participante ${i}:`).toUpperCase() + "\n";
+        if(!tipo || tipo == 0 || tipo > 2){
+            alert("ERROR - Digite  1 o 2, de acuerdo al tipo de usuario ");
         }
-        alert(`Bienvenid@s:\n ${nombreParticipante} ustedes serán grupo del Hackaton Coderhouse 2022 `);
-        break;
-
-    } else {                
-        alert("ERROR - Digite  1 o 2, de acuerdo al tipo de usuario ");
-        registrar();
-        errorVacio();
     }
 
-} while(usuario);
+    switch(tipo){
+        case 1:
+            juez += prompt("Ingrese Nombre:").toUpperCase();
+            alert(`Bienvenid@! ${juez}, usted será parte del jurado en el Hackaton CoderHouse 2022`);
+            break;
+
+        case 2:
+            for(let i=1; i<=2; i++){
+                participante  += prompt(`Ingrese Nombre del participante ${i}:`).toUpperCase() + "\n";
+                }
+            alert(`Bienvenid@s:\n ${participante} ustedes serán grupo del Hackaton Coderhouse 2022 `);
+            break;
+    }
+
+    return new Usuario(tipo)
+}
+
+
+
+const usuario1 = elegirTipo();
+
+console.log(usuario1);

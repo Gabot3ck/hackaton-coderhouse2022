@@ -46,14 +46,17 @@ function elegirTipo(){
             break;
 
         case 2:
-            for(let i=1; i<=2; i++){
+            for(let i=1; i<=4; i++){
                 equipo.push(prompt(`Ingrese Nombre del participante ${i}:`).toUpperCase());
             }
-            alert(`Bienvenid@s: \n \n ${equipo.join("\n")} \n \n Ustedes serán grupo del Hackaton Coderhouse 2022 `);
+            alert(`Bienvenid@s: \n \n${equipo.join("\n").trim()} \n \n Ustedes serán grupo del Hackaton Coderhouse 2022 `);
             
             break;
     }
     return new Usuario(tipo)
 }
 
-elegirTipo();
+setTimeout(() => {
+    elegirTipo();
+}, 2000);
+

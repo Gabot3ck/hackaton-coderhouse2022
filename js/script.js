@@ -12,10 +12,12 @@
 
 
 // Declaración de Variables
-
 let tipo = 0;
 let juez = "";
-let participante = "";
+
+//Declaración de Arrays
+const equipo = [];
+
 
 
 //Creación de Clases
@@ -24,7 +26,6 @@ class Usuario{
         this.tipo = tipo;
     }
 }
-
 
 //Creación de Funciones
 function elegirTipo(){
@@ -46,17 +47,13 @@ function elegirTipo(){
 
         case 2:
             for(let i=1; i<=2; i++){
-                participante  += prompt(`Ingrese Nombre del participante ${i}:`).toUpperCase() + "\n";
-                }
-            alert(`Bienvenid@s:\n ${participante} ustedes serán grupo del Hackaton Coderhouse 2022 `);
+                equipo.push(prompt(`Ingrese Nombre del participante ${i}:`).toUpperCase());
+            }
+            alert(`Bienvenid@s: \n \n ${equipo.join("\n")} \n \n Ustedes serán grupo del Hackaton Coderhouse 2022 `);
+            
             break;
     }
-
     return new Usuario(tipo)
 }
 
-
-
-const usuario1 = elegirTipo();
-
-console.log(usuario1);
+elegirTipo();

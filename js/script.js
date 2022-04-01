@@ -56,7 +56,7 @@ function elegirTipo(){
     return new Usuario(tipo)
 }
 
-setTimeout(() => {
-    elegirTipo();
-}, 2000);
+// setTimeout(() => {
+//     elegirTipo();
+// }, 2000);
 

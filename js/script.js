@@ -134,16 +134,11 @@ function buscarNickname(){
     return nick;
 }
 
-<<<<<<< HEAD
-// setTimeout(() => {
-//     elegirTipo();
-// }, 2000);
-=======
 
 //Se crea un temporizador para correr el simulador
 setTimeout(() => {
     elegirTipo();
->>>>>>> javascript
+
 
     //Se evalua de acuerdo al tipo de usuario si es juez o participante se le agrega a su array correspondiente
     if(nuevoUser.tipo === "juez"){

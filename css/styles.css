@@ -36,8 +36,9 @@ html {
 
 body {
     margin: 0 auto;
-    width: 100vw;
-    background: var(--color-black);
+    width: 100%;
+    min-height: 100vh;
+    background: red;
     font-family: 'DM Sans', sans-serif;
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
@@ -46,6 +47,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 a {
@@ -89,16 +91,17 @@ p {
 
 /* BANNER */
 .banner{
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 999;
     width: 100%;
+    height: 64px;
     text-align: center;
     font-size: .7rem;
     background-color: var(--color-rosa);
 }
 .banner p{
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 .banner a{
     color: var(--color-black);
@@ -114,8 +117,8 @@ p {
 
 /*MENÚ  DE  NAVEGACIÓN*/
 .navegacion{
-    position: fixed;
-    top: 88px;
+    position: sticky;
+    top: 64px;
     z-index: 998;
     padding: 10px 50px;
     width: 100%;
@@ -150,18 +153,19 @@ p {
 
 /*HEADER*/
 .header{
-    position: absolute;
-    top: 180px;
+    /* position: absolute;
+    top: 180px; */
     padding: 30px;
+    border-bottom: .5px solid var(--color-parrafos);
     width: 100%;
     height: 100vh;
     display: flex;
     color: var(--color-white);
+    background-color: var(--color-black);
 }
 .header h1{
     margin-bottom: 20px;
     font-size: 2.4rem;
-    font-weight: 700;
 }
 .header h2{
     margin: 20px 0;
@@ -192,8 +196,37 @@ p {
 }
 
 
+/*Main*/
+.main{
+    height: 85vh;
+    /* background-color: #ffff00; */
+}
 
 
+/*Empresas*/
+.empresas{
+    height: 85vh;
+    background-color: green;
+}
+
+
+/*Jurado*/
+.jurado{
+    height: 85vh;
+    background-color: orange;
+}
+
+/*Desafíos*/
+.desafios{
+    height: 85vh;
+    background-color: green;
+}
+
+/*Footer*/
+.footer{
+    height: 30vh;
+    background-color: lightskyblue;
+}
 
 
 /* INGRESAR */

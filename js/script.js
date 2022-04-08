@@ -136,23 +136,23 @@ function buscarNickname(){
 
 
 //Se crea un temporizador para correr el simulador
-setTimeout(() => {
-    elegirTipo();
+// setTimeout(() => {
+//     elegirTipo();
 
 
-    //Se evalua de acuerdo al tipo de usuario si es juez o participante se le agrega a su array correspondiente
-    if(nuevoUser.tipo === "juez"){
-        jurado.push(nuevoUser);
-    } else {
-        participante = nuevoUser;
-        equipo.push(participante);
-    }
+//     //Se evalua de acuerdo al tipo de usuario si es juez o participante se le agrega a su array correspondiente
+//     if(nuevoUser.tipo === "juez"){
+//         jurado.push(nuevoUser);
+//     } else {
+//         participante = nuevoUser;
+//         equipo.push(participante);
+//     }
 
 
-    //Se vuelve a mostrar por consola el array de los nicknames con el nuevo nickname ingresado
-    console.log("Se muestra el array de los nicknames incluyendo el del nuevo usuario:\n");
-    console.log(almacenarNickname);
+//     //Se vuelve a mostrar por consola el array de los nicknames con el nuevo nickname ingresado
+//     console.log("Se muestra el array de los nicknames incluyendo el del nuevo usuario:\n");
+//     console.log(almacenarNickname);
 
-    totalEquipos.push(equipo)
-    console.log(totalEquipos);
-}, 1200);
+//     totalEquipos.push(equipo)
+//     console.log(totalEquipos);
+// }, 1200);

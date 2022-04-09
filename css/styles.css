@@ -38,7 +38,7 @@ body {
     margin: 0 auto;
     width: 100%;
     min-height: 100vh;
-    background: var(--color-black);
+    background: var(--color-secundario);
     font-family: 'DM Sans', sans-serif;
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
@@ -69,6 +69,7 @@ li {
 
 p {
     margin-bottom: 0;
+    font-size: .8rem;
     line-height: 1.3rem; }
 
 .logo{
@@ -77,6 +78,17 @@ p {
 .contenedor{
     width: clamp(400px, 60vw, 600px);
 }
+.subtitulo{
+    color:#ffff00;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+.wrapper{
+    margin: 0 auto;
+    padding: 30px 0 0;
+}
+
 
 /*Botones*/
 .boton-principal{
@@ -100,6 +112,7 @@ p {
     height: 64px;
     text-align: center;
     font-size: .7rem;
+    color: var(--color-secundario);
     background-color: var(--color-rosa);
 }
 
@@ -157,7 +170,7 @@ p {
     height: 90vh;
     display: flex;
     color: var(--color-white);
-    background-color: var(--color-black);
+    background-color: var(--color-secundario);
 }
 .header h1{
     margin-bottom: 20px;
@@ -194,8 +207,6 @@ p {
 
 /*Main*/
 .desafios{
-    margin: 0 auto;
-    padding: 30px 0 0;
     max-width: 1200px;
     height: 85vh;
     display: grid;
@@ -205,21 +216,12 @@ p {
         "titulos     titulos  "
         "article1    article2 ";
     justify-content: space-evenly;
-    background-color: var(--color-black);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ";
-}
-.desafios p{
-    font-size: .8rem;
+    background-color: var(--color-secundario);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ";
 }
 .desafios__titulo{
     margin: 20px 0 30px;
     grid-area: titulos;
     text-align: center;
-}
-.desafios__titulo p:first-child{
-    color:#ffff00;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    word-spacing: 10px;
 }
 .desafios__article1{
     grid-area: article1;
@@ -231,8 +233,35 @@ p {
 
 /*Empresas*/
 .empresas{
-    height: 85vh;
-    background-color: green;
+    height: contain;
+    text-align: center;
+    background-color: var(--color-white);
+}
+.empresas >p{
+    color: var(--color-secundario);
+}
+.empresas h3{
+    margin-bottom: 80px;
+    color: var(--color-secundario);
+}
+.empresas__logos{
+    margin: 0 auto;
+    width: 90%;
+	display: grid;
+    gap: 1rem;
+    grid-auto-rows: 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(13rem,1fr));
+    justify-items: center;
+}
+.empresas__logos a{
+	margin: 15px auto !important;
+}
+.empresas__logos div{
+    width: 160px;
+}
+.empresas__logos img{
+	width: 150px;
+	height: 100px;
 }
 
 

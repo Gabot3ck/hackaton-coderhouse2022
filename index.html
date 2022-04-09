@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Hackaton Coder 2022</title>
 </head>
@@ -78,8 +79,11 @@
 
     <!-- SECCIÓN EMPRESAS PARTICIPANTES -->
     <section class="empresas container wrapper">
-		<p class="subtitulo" >Acepta los desafíos</p>
-        <h3>Empresas Participantes</h3>
+        <div class="wrapper_titulos">
+            <p class="subtitulo" >Acepta los desafíos</p>
+            <h3>Empresas Participantes</h3>
+        </div>
+		
 		<div class="empresas__logos">
             <div class=""><img src="images/accenture.png" alt=""></div>
             <div class=""><img src="images/olx.png" alt=""></div>
@@ -95,14 +99,67 @@
     <!-- FIN  SECCIÓN EMPRESAS PARTICIPANTES -->
 
 
+    <!-- SECCIÓN JURADO CALIFICADOR -->
+    <section class="jurado wrapper">
+        <div class="wrapper_titulos">
+            <p class="subtitulo">Expertos de la industria</p>
+            <h3>Nuestro jurado</h3>
+        </div>
+        
 
-    <section class="jurado">
-        <h3>Nuestro jurado</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/juez1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/juez2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/juez3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
+    <!-- FIN  SECCIÓN JURADO CALIFICADOR -->
 
-    <footer class="footer">
-        <h4>Footer</h4>
-    </footer>
+
+    <!-- FOOTER -->
+	<footer class="footer contenedor">
+		<div class="footer__pie ">
+			<aside class="pie__rrss">
+				<h3 class="titulo-footer step-2">Síguenos en redes sociales</h3>
+				<ul>
+					<li><a href="https://www.facebook.com/Coderhouse/" target="_blank" ><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://www.linkedin.com/school/coderhouse/" target="_blank" ><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="https://twitter.com/coderhouse" target="_blank" ><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/coderhouse/" target="_blank" ><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://www.youtube.com/c/CoderHouse" target="_blank" ><i class="fab fa-youtube"></i></a></li>
+				</ul>
+			</aside>
+			<p class="autor step-0">Elaborado con pasión por <a href="https://www.linkedin.com/in/gabriel-castillo-frontend/" target="_blank">Gabriel Castillo</a></p>
+		</div>
+	</footer>
 
 
 

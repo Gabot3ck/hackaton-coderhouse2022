@@ -23,7 +23,7 @@
 /*RESET*/
 html {
     box-sizing: border-box;
-    color: #313131; 
+    color: var(--color-white); 
     font-size: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *var(--fluid-bp));
 }
 
@@ -38,7 +38,7 @@ body {
     margin: 0 auto;
     width: 100%;
     min-height: 100vh;
-    background: red;
+    background: var(--color-black);
     font-family: 'DM Sans', sans-serif;
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
@@ -49,7 +49,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-
+h3{
+    font-size: 1.7rem;
+}
 a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -100,9 +102,7 @@ p {
     font-size: .7rem;
     background-color: var(--color-rosa);
 }
-.banner p{
-    /* margin: 10px 0; */
-}
+
 .banner a{
     color: var(--color-black);
 }
@@ -149,16 +149,12 @@ p {
 }
 
 
-
-
 /*HEADER*/
 .header{
-    /* position: absolute;
-    top: 180px; */
     padding: 30px;
     border-bottom: .5px solid var(--color-parrafos);
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     color: var(--color-white);
     background-color: var(--color-black);
@@ -197,9 +193,39 @@ p {
 
 
 /*Main*/
-.main{
+.desafios{
+    margin: 0 auto;
+    padding: 30px 0 0;
+    max-width: 1200px;
     height: 85vh;
-    /* background-color: #ffff00; */
+    display: grid;
+    grid-template-columns: minmax(100px,40%) minmax(100px,40%);
+    grid-template-rows: 150px 250px;
+    grid-template-areas: 
+        "titulos     titulos  "
+        "article1    article2 ";
+    justify-content: space-evenly;
+    background-color: var(--color-black);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ";
+}
+.desafios p{
+    font-size: .8rem;
+}
+.desafios__titulo{
+    margin: 20px 0 30px;
+    grid-area: titulos;
+    text-align: center;
+}
+.desafios__titulo p:first-child{
+    color:#ffff00;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+.desafios__article1{
+    grid-area: article1;
+}
+.desafios__article2{
+    grid-area: article2;
 }
 
 
@@ -216,11 +242,6 @@ p {
     background-color: orange;
 }
 
-/*Desafíos*/
-.desafios{
-    height: 85vh;
-    background-color: green;
-}
 
 /*Footer*/
 .footer{

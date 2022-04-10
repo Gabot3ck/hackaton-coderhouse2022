@@ -156,3 +156,9 @@ function buscarNickname(){
 //     totalEquipos.push(equipo)
 //     console.log(totalEquipos);
 // }, 1200);
+
+
+/*Reducción de velocidad de video de fondo*/
+let video = document.querySelector('video');
+video.defaultPlaybackRate = 0.5;
+video.load();

@@ -125,6 +125,7 @@ label{
     display: block;
     color: var(--color-txtForm);
     font-size: .9rem;
+    font-family: var(--text-consola);
     border-radius: 5px;
     background-color: transparent;
     transition: all .6s ease-in-out;
@@ -306,103 +307,6 @@ label{
 }
 
 
-
-
-
-
-
-/*Footer*/
-.footer{
-	color: #fff;
-	background: var(--color-footer);
-}
-.footer__enlaces{
-	padding: 40px 15px 0 ; 
-}
-.footer__enlaces img{
-	width: 50px;
-	height: 60px;
-	grid-area: logo;
-}
-.footer__enlaces, .enlaces__nosotros{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-.enlaces__nosotros, .enlaces__servicios, .enlaces__proyectos{
-	margin-bottom: 25px;
-}
-.enlaces__nosotros{
-	grid-area: nosotros;
-}
-.enlaces__servicios{
-	grid-area: servicios;
-}
-.enlaces__proyectos{
-	grid-area: proyectos;
-}
-.enlaces__nosotros p{
-	font-family: var(--font-texto);
-	font-size: 14px;
-	line-height: 1.6;
-	color: var(--enlaces-footer);
-}
-.enlaces__servicios li a:hover, .enlaces__proyectos li a:hover{
-	color: var(--color-principal);
-	font-weight: 500;
-	letter-spacing: 1px;
-}
-.footer__pie{
-	height: 130px;
-	color: white;
-	background: var(--color-copyright);
-}
-.footer__pie h3{
-	margin-top: 0 !important;
-	padding-top: 5px;
-}
-.pie__rrss {
-	padding: 0 15px !important;
-	text-align: center;
-}
-.pie__rrss ul{
-	margin: 0 !important;
-	padding: 0 20px !important;
-	display: flex;
-	justify-content: space-evenly;
-	font-size: 16px;
-}
-.fa-facebook-f, .fa-linkedin-in, .fa-twitter, .fa-youtube, .fa-instagram{
-	color: var(--color-principal);
-}
-.pie__copyright{
-	padding-top: 15px;
-	display: flex; 
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
-}
-.pie__copyright p, .pie__copyright button{
-	margin: 0 10px;
-	font-style: var(--font-texto);
-	color: #8b8b8b;
-}
-.pie__copyright button{
-	color: #8b8b8b;
-	background: none;
-	border: none;
-}
-.autor{
-	margin: 5px 0 0;
-	text-align: center;
-	color: #8b8b8b;
-}
-.autor a{
-	color: var(--color-principal);
-}
-
-
-
 /*REGISTRO*/
 .wrapper_formulario{
     position: relative;
@@ -440,13 +344,11 @@ label{
 .formulario p{
     margin-bottom: 40px;
 }
-
-
 .form-control {
     padding: 10px 15px;
     margin: 10px auto 20px;
     border: none;
-    width: 80%;
+    width: 90%;
     height: 45px;
     color: #555555;
     font-size: 1rem;
@@ -460,11 +362,6 @@ label{
 .list-form{
     margin-right: 15px;
 }
-
-
-
-
-
 
 
 /* INGRESAR */
@@ -487,4 +384,66 @@ label{
 }
 .logo__black{
     height: 50px;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 50px;
+    width: 100%;
+	color: #fff;
+	background: var(--color-footer);
+}
+.footer__wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
+	height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+	color: white;
+    text-align: center;
+}
+.footer__wrapper h4{
+    margin-top: 20px;
+    font-size: .7rem;
+    font-weight: 500;
+}
+.pie__rrss {
+    margin: 0 auto;
+    width: 600px;
+	padding: 0 15px;
+	text-align: center;
+    align-items: center;
+}
+.pie__rrss p{
+    margin: 8px 0;
+    font-size: .8rem;
+}
+.pie__rrss ul{
+	margin: 0;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 16px;
+}
+.fa-facebook-f, .fa-linkedin-in, .fa-twitter, .fa-youtube, .fa-instagram{
+	color: var(--color-principal);
+    transition: all .3s ease;
+}
+.fa-facebook-f:hover, 
+.fa-linkedin-in:hover, 
+.fa-twitter:hover, 
+.fa-youtube:hover, 
+.fa-instagram:hover,
+.autor a:hover{
+	color: var(--color-txtForm);
+}
+.autor{
+	margin: 5px 0 0;
+    font-size: .7rem;
+}
+.autor a{
+	color: var(--color-principal);
+    font-size: .7rem;
+    transition: all .3s ease;
 }

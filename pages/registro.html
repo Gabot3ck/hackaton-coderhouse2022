@@ -53,24 +53,31 @@
     <!-- SECCIÓN PRINCIPAL - REGISTRO DE INSCRIPCIONES -->
     <main class="wrapper_formulario " >
 
-        <video src="../images/esferas.mp4" autoplay="true" muted="true" loop="true" poster="https://carontestudio.com/img/contacto.jpg"></video>
+        <video src="../images/esferas.mp4" autoplay="true" muted="true" loop="true" poster="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg"></video>
         
         <form class="formulario wrapper" action="registro.php" method="post" name="formulario" accept-charset="utf-8">
 
             <h1>Bienvenido! a la Hackaton Coder 2022.</h1>
             <p>Ingrese sus datos para ser registrado:</p>
+
             <label for="email">Ingrese su email:</label><br>
 			<span class="list-form" ></span><input type="email" id="email"  name="email"  class="form-control"  required><br>
+
             <label for="email2">Confirme su email:</label><br>
 			<span class="list-form" ></span><input type="email" id="email2"  name="email2"  class="form-control"  required><br>
+
             <label for="username">Ingrese un nombre de usuario:</label><br>
             <span class="list-form" ></span><input type="text"  id="username" name="username"  class="form-control"  required><br>
+
             <label for="username2">Confirme su nombre de usuario:</label><br>
             <span class="list-form" ></span><input type="text"  id="username2" name="username2"  class="form-control"  required><br>
+
             <label for="nombre">Ingrese su nombre:</label><br>
             <span class="list-form" ></span><input type="text"  id="nombre"   name="nombre"  class="form-control"  required><br>
+
             <label for="apellido">Ingrese su apellido:</label><br>
             <span class="list-form" ></span><input type="text"  id="apellido" name="apellido"  class="form-control" required><br>
+
             <input type="submit" id="btn-enviar" name="btn-enviar" value="Continuar" class="boton-form">
 
         </form>
@@ -81,10 +88,10 @@
 
 
     <!-- FOOTER -->
-	<footer class="footer contenedor">
-		<div class="footer__pie ">
+	<footer class="footer">
+		<div class="footer__wrapper ">
 			<aside class="pie__rrss">
-				<h3 class="titulo-footer step-2">Síguenos en redes sociales</h3>
+				<p class="">Síguenos en redes sociales</p>
 				<ul>
 					<li><a href="https://www.facebook.com/Coderhouse/" target="_blank" ><i class="fab fa-facebook-f"></i></a></li>
 					<li><a href="https://www.linkedin.com/school/coderhouse/" target="_blank" ><i class="fab fa-linkedin-in"></i></a></li>
@@ -93,7 +100,8 @@
 					<li><a href="https://www.youtube.com/c/CoderHouse" target="_blank" ><i class="fab fa-youtube"></i></a></li>
 				</ul>
 			</aside>
-			<p class="autor step-0">Elaborado con pasión por <a href="https://www.linkedin.com/in/gabriel-castillo-frontend/" target="_blank">Gabriel Castillo</a></p>
+            <h4>© 2022 Coderhouse, todos los derechos reservados.</h4>
+			<p class="autor">Elaborado con pasión por <a href="https://www.linkedin.com/in/gabriel-castillo-frontend/" target="_blank">Gabriel Castillo</a></p>
 		</div>
 	</footer>
     <!-- FIN  DE FOOTER -->

@@ -305,9 +305,22 @@ label{
 .card{
     color: #121212;
 }
+.card-body h5{
+    text-align: center;
+    text-transform: uppercase;
+}
+.card-body p{
+    display: inline-block;
+    font-weight: 600;
+    font-size: .7rem;
+}
+.card-body span{
+    margin-left: 10px;
+    font-size: .7rem;
+}
 
 
-/*REGISTRO*/
+/*REGISTRO Y LLENADO DE FORMULARIO*/
 .wrapper_formulario{
     position: relative;
     padding-top: 50px;
@@ -330,9 +343,9 @@ label{
     padding: 30px;
     border: 1px solid #413f3fec;
     width: 50%;
-    height: contain;
+    height: auto;
     border-radius: 5px;
-    background-color: #0f0013f3
+    background-color: #130018f0;
 }
 .formulario h1, .formulario p{
     margin-bottom: 10px;
@@ -345,24 +358,45 @@ label{
     margin-bottom: 40px;
 }
 .form-control {
-    padding: 10px 15px;
     margin: 10px auto 20px;
     border: none;
     width: 90%;
-    height: 45px;
+    height: 1.2rem;
+    display: inline-block;
     color: #555555;
-    font-size: 1rem;
-    background-color: white;
+    font-size: .9rem;
+    font-family: var(--text-consola);
+    background-color: transparent;
 }
 .form-control:focus {
-    outline: none;
-    border-color: #06c2cc !important;
+    color: var(--color-white);
+    background-color: transparent;
     box-shadow: none;
 }
 .list-form{
     margin-right: 15px;
 }
 
+#email2,
+#username,
+#username2,
+#nombre,
+#apellido,
+#labelEmail2,
+#labelUsername,
+#labelUsername2,
+#labelNombre,
+#labelApellido
+{
+    display: none;
+}
+.arrow{
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: var(--color-verde);
+}
+
+/* <i class="bi bi-check"> */
 
 /* INGRESAR */
 .wrapper__registro{
@@ -404,7 +438,7 @@ label{
     text-align: center;
 }
 .footer__wrapper h4{
-    margin-top: 20px;
+    margin: 15px 0 8px;
     font-size: .7rem;
     font-weight: 500;
 }
@@ -416,7 +450,7 @@ label{
     align-items: center;
 }
 .pie__rrss p{
-    margin: 8px 0;
+    margin-bottom: 10px;
     font-size: .8rem;
 }
 .pie__rrss ul{
@@ -439,7 +473,6 @@ label{
 	color: var(--color-txtForm);
 }
 .autor{
-	margin: 5px 0 0;
     font-size: .7rem;
 }
 .autor a{

@@ -56,31 +56,36 @@
 
         <video src="../images/esferas.mp4" autoplay="true" muted="true" loop="true" poster="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg"></video>
         
-        <form class="formulario wrapper" action="registro.php" method="post" name="formulario" accept-charset="utf-8" id="formulario" >
+        <form id="formulario" class="formulario wrapper" action="registro.php" method="post" name="formulario" accept-charset="utf-8">
 
             <h1>Bienvenido! a la Hackaton Coder 2022.</h1>
             <p>Ingrese sus datos para ser registrado:</p>
 
             <label for="email" id="labelEmail" >Ingrese su email:</label><br>
-			<i class="bi bi-arrow-right arrow"></i>
-            <input type="email" id="email"  name="email"  class="form-control"  required autofocus><br>
+			<i class="bi bi-arrow-right valido"></i>
+            <input id="email" type="email"   name="email"  class="form-control"  required autofocus><br>
 
             <!-- <label for="email2" id="labelEmail2">Confirme su email:</label><br>
-			<span class="list-form" ></span><input type="email" id="email2"  name="email2"  class="form-control"  required><br>
+            <i class="bi bi-arrow-right valido"></i>
+            <input type="email" id="email2"  name="email2"  class="form-control"  required><br> -->
 
             <label for="username" id="labelUsername">Ingrese un nombre de usuario:</label><br>
-            <span class="list-form" ></span><input type="text"  id="username" name="username"  class="form-control"  required><br>
+            <i class="bi bi-arrow-right valido"></i>
+            <input type="text"  id="username" name="username"  class="form-control"  required><br>
 
-            <label for="username2" id="labelUsername2">Confirme su nombre de usuario:</label><br>
-            <span class="list-form" ></span><input type="text"  id="username2" name="username2"  class="form-control"  required><br>
+            <!-- <label for="username2" id="labelUsername2">Confirme su nombre de usuario:</label><br>
+            <i class="bi bi-arrow-right valido"></i>
+            <input type="text"  id="username2" name="username2"  class="form-control"  required><br> -->
 
             <label for="nombre" id="labelNombre">Ingrese su nombre:</label><br>
-            <span class="list-form" ></span><input type="text"  id="nombre"   name="nombre"  class="form-control"  required><br>
+            <i class="bi bi-arrow-right valido"></i>
+            <input type="text"  id="nombre"   name="nombre"  class="form-control"  required><br>
 
             <label for="apellido" id="labelApellido">Ingrese su apellido:</label><br>
-            <span class="list-form" ></span><input type="text"  id="apellido" name="apellido"  class="form-control" required><br> -->
+            <i class="bi bi-arrow-right valido"></i>
+            <input type="text"  id="apellido" name="apellido"  class="form-control" required><br>
 
-            <input type="submit" id="btn-enviar" name="btn-enviar" value="Continuar" class="boton-form">
+            <input  type="button" id="btnContinuarForm" name="btn-continuar" value="Continuar" class="boton-form">
 
         </form>
     </main>

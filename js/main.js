@@ -60,6 +60,7 @@ function elegirTipo(){
                 email += prompt("Ingrese su email:").toUpperCase();
                 // alert(`Bienvenid@! ${username}, usted será parte del jurado en el Hackaton CoderHouse 2022`);
 
+                //Agregando una Card de Bootstrap con los datos ingresados para la opción 1
                 let containerCardJurado = d.getElementById("containerJurado");
                 let nuevaCard = d.createElement("div");
 
@@ -76,7 +77,6 @@ function elegirTipo(){
                 
                 nuevaCard.classList.add("col");
                 containerCardJurado.appendChild(nuevaCard);
-
                 break;
     
             case 2:
@@ -116,20 +116,20 @@ function buscarNickname(){
 
 
 // Se crea un temporizador para correr el simulador
-setTimeout(() => {
-    elegirTipo();
+// setTimeout(() => {
+//     elegirTipo();
 
 
-    //Se evalua de acuerdo al tipo de usuario si es juez o participante se le agrega a su array correspondiente
-    if(nuevoUser.tipo === "juez"){
-        jurado.push(nuevoUser);
-    } else {
-        participante = nuevoUser;
-        equipo.push(participante);
-    }
-    totalEquipos.push(equipo)
-    console.log(totalEquipos);
-}, 1200);
+//     //Se evalua de acuerdo al tipo de usuario si es juez o participante se le agrega a su array correspondiente
+//     if(nuevoUser.tipo === "juez"){
+//         jurado.push(nuevoUser);
+//     } else {
+//         participante = nuevoUser;
+//         equipo.push(participante);
+//     }
+//     totalEquipos.push(equipo)
+//     console.log(totalEquipos);
+// }, 1200);
 
 
 
@@ -140,3 +140,118 @@ video.defaultPlaybackRate = .3;
 video.load();
 
 
+
+/* Validación de formulario */
+
+    //Variables
+let inputEmail       = d.getElementById("email"),
+    inputUsuario,
+    btnContinuarForm = d.getElementById("btnContinuarForm"),
+    formulario       = d.getElementById("formulario"),
+    
+    flechaHtml       = d.querySelector(".bi-arrow-right");
+
+let validarEmail= "";
+let validarUsername = "";
+
+
+//Creando un Array para almacenar los emails
+const emailParticipantes = equipo.map(el => el.email);
+const emailJurado = jurado.map(el => el.email);
+const almacenarEmail = emailParticipantes.concat(emailJurado);
+
+//Creando Arrays para almacenar los usernames
+const usernameParticipantes = equipo.map(el => el.username);
+const usernameJurado = jurado.map(el => el.username);
+const almacenarUsername = usernameParticipantes.concat(usernameJurado);
+
+
+//Creando elementos
+let flecha = d.createElement("i");
+    flecha.classList.add("bi","bi-arrow-right","valido");
+
+let check = d.createElement("i");
+    check.classList.add("bi","bi-check","valido");
+
+let div = d.createElement("div");
+
+
+
+
+    //Eventos
+btnContinuarForm.addEventListener("click",continuar);
+// btnContinuarForm.addEventListener("click",continuar2);
+
+inputEmail.addEventListener("change",e =>{
+    validarEmail = e.target.value;
+});
+
+
+
+
+
+    //Funciones
+function crearInput(frase,type,id,name) {
+    div.innerHTML = `
+        <label>Ingresar ${frase}:</label><br>
+        <i class="bi bi-arrow-right valido"></i>
+        <input type="${type}" id="${id}"  name="${name}"  class="form-control"  required><br>
+        `;
+}
+
+
+function continuar(e){
+    e.preventDefault();
+    if(inputEmail != ""){
+        validarInputs(almacenarEmail,validarEmail,"nombre de usuario","text","username","username");
+        btnContinuarForm.before(div);
+
+        setTimeout(() => {
+            validarUsuario();
+            console.log(validarUsername);
+        }, 1000);
+        
+    }
+    
+    inputUsuario.addEventListener("change",e =>{
+        validarUsername = e.target.value;
+    });
+    if(inputUsuario != ""){
+        
+        validarInputs(almacenarUsername,validarUsername,"apellido","text","apellido","apellido");
+    }
+    
+}
+
+function validarUsuario(){
+    inputUsuario =   d.getElementById("username");
+    inputUsuario.addEventListener("change",e =>{
+        validarUsername = e.target.value;
+    });
+    console.log(inputUsuario)
+}
+
+
+// function continuar2(e) {
+//     if(!almacenarUsername.includes(validarUsername)){
+
+//         crearInput("apellido","text","apellido","apellido");
+//         btnContinuarForm.before(div);
+
+//     }else {
+//         alert("El usuario ya está registrado");
+//     }
+// }
+
+function validarInputs(arrayAlmacenado,varValidar,texto,type,id,name){
+    if(!arrayAlmacenado.includes(varValidar)){
+        crearInput(texto,type,id,name);
+        
+    } else {
+        mensajeDeAlerta(`Su ${name} ya está registrado.`);
+    }
+}
+
+function mensajeDeAlerta(mensaje){
+    alert(mensaje);
+}

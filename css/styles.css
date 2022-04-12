@@ -368,7 +368,7 @@ label{
     font-family: var(--text-consola);
     background-color: transparent;
 }
-.form-control:focus {
+.form-control:focus, .form-control:visited, .form-control:active {
     color: var(--color-white);
     background-color: transparent;
     box-shadow: none;
@@ -377,7 +377,7 @@ label{
     margin-right: 15px;
 }
 
-#email2,
+/* #email2,
 #username,
 #username2,
 #nombre,
@@ -389,8 +389,10 @@ label{
 #labelApellido
 {
     display: none;
-}
-.arrow{
+    overflow: hidden;
+} */
+
+.valido{
     margin-right: 15px;
     font-size: 1.2rem;
     color: var(--color-verde);

@@ -305,6 +305,13 @@ label{
 .card{
     color: #121212;
 }
+.card img{
+    margin: 0 auto;
+    width: 350px;
+    height: 350px;
+    display: block;
+
+}
 .card-body h5{
     text-align: center;
     text-transform: uppercase;
@@ -377,21 +384,6 @@ label{
     margin-right: 15px;
 }
 
-/* #email2,
-#username,
-#username2,
-#nombre,
-#apellido,
-#labelEmail2,
-#labelUsername,
-#labelUsername2,
-#labelNombre,
-#labelApellido
-{
-    display: none;
-    overflow: hidden;
-} */
-
 .valido{
     margin-right: 15px;
     font-size: 1.2rem;
@@ -399,6 +391,15 @@ label{
 }
 
 /* <i class="bi bi-check"> */
+
+/*modal*/
+.modal-title{
+    color: #121212;
+}
+.modal-body{
+    color: #121212;
+}
+
 
 /* INGRESAR */
 .wrapper__registro{
@@ -482,3 +483,5 @@ label{
     font-size: .7rem;
     transition: all .3s ease;
 }
+
+

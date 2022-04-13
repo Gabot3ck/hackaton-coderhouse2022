@@ -56,12 +56,12 @@
 
         <video src="../images/esferas.mp4" autoplay="true" muted="true" loop="true" poster="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg"></video>
         
-        <form id="formulario" class="formulario wrapper" action="registro.php" method="post" name="formulario" accept-charset="utf-8">
+        <form id="form" class="formulario wrapper" action="registro.php" method="post" name="formulario" accept-charset="utf-8">
 
             <h1>Bienvenido! a la Hackaton Coder 2022.</h1>
             <p>Ingrese sus datos para ser registrado:</p>
 
-            <label for="email" id="labelEmail" >Ingrese su email:</label><br>
+            <label for="email" id="emailLabel" >Ingrese su email:</label><br>
 			<i class="bi bi-arrow-right valido"></i>
             <input id="email" type="email"   name="email"  class="form-control"  required autofocus><br>
 
@@ -69,7 +69,7 @@
             <i class="bi bi-arrow-right valido"></i>
             <input type="email" id="email2"  name="email2"  class="form-control"  required><br> -->
 
-            <label for="username" id="labelUsername">Ingrese un nombre de usuario:</label><br>
+            <label for="username" id="usernameLabel">Ingrese un nombre de usuario:</label><br>
             <i class="bi bi-arrow-right valido"></i>
             <input type="text"  id="username" name="username"  class="form-control"  required><br>
 
@@ -77,17 +77,42 @@
             <i class="bi bi-arrow-right valido"></i>
             <input type="text"  id="username2" name="username2"  class="form-control"  required><br> -->
 
-            <label for="nombre" id="labelNombre">Ingrese su nombre:</label><br>
+            <label for="name" id="nameLabel">Ingrese su nombre:</label><br>
             <i class="bi bi-arrow-right valido"></i>
-            <input type="text"  id="nombre"   name="nombre"  class="form-control"  required><br>
+            <input type="text"  id="name"   name="name"  class="form-control"  required><br>
 
-            <label for="apellido" id="labelApellido">Ingrese su apellido:</label><br>
+            <label for="lastName" id="lastNameLabel">Ingrese su apellido:</label><br>
             <i class="bi bi-arrow-right valido"></i>
-            <input type="text"  id="apellido" name="apellido"  class="form-control" required><br>
+            <input type="text"  id="lastName" name="lastName"  class="form-control" required><br>
 
-            <input  type="button" id="btnContinuarForm" name="btn-continuar" value="Continuar" class="boton-form">
-
+            <button class="boton-form" id="btnForm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Bienvenido!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card h-100">
+                                <img src="../images/usuario.png" class="card-img-top" alt="...">
+                                <div class="card-body" id="cardBody">
+                                    <h5 class="card-title">Ben</h5>
+                                    <p>Nombre:</p><span>Benjamin</span><br>
+                                    <p>Apellido:</p><span>Torres</span><br>
+                                    <p>Email:</p><span>bento90@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
+
+        
+
     </main>
     <!-- FIN  SECCIÓN PRINCIPAL - REGISTRO DE INSCRIPCIONES
     
@@ -118,7 +143,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="../js/dbUsuarios.js" type="module"></script>
+    <script src="../js/dbUsers.js" type="module"></script>
     <script src="../js/main.js" type="module"></script>
 </body>
 </html>

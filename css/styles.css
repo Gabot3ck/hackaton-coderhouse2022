@@ -384,13 +384,34 @@ label{
     margin-right: 15px;
 }
 
-.valido{
+.icon{
     margin-right: 15px;
     font-size: 1.2rem;
+}
+.bi-check-lg{
     color: var(--color-verde);
 }
+.bi-arrow-right{
+    color: var(--color-rosa);
+}
+.bi-x-lg{
+    color: red;
+}
 
-/* <i class="bi bi-check"> */
+.alertMessage{
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 1px solid red;
+    width: 80%;
+	font-weight: 600;
+    font-family: var(--text-consola);
+	color: red !important;
+	text-align:  center;
+	text-transform: uppercase;
+	background-color: transparent;
+}
+
+
 
 /*modal*/
 .modal-title{

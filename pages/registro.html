@@ -61,28 +61,34 @@
             <h1>Bienvenido! a la Hackaton Coder 2022.</h1>
             <p>Ingrese sus datos para ser registrado:</p>
 
-            <label for="email" id="emailLabel" >Ingrese su email:</label><br>
-			<i class="bi bi-arrow-right valido"></i>
+            <label for="email" id="labelEmail" >Ingrese su email:</label><br>
+			<!-- <i class="bi bi-check-lg icon"></i> -->
+            <!-- <i class="bi bi-x-lg icon"></i> -->
+            <i class="bi bi-arrow-right  icon " id="icon1"></i>
             <input id="email" type="email"   name="email"  class="form-control"  required autofocus><br>
 
             <!-- <label for="email2" id="labelEmail2">Confirme su email:</label><br>
-            <i class="bi bi-arrow-right valido"></i>
+            <i class="bi bi-arrow-right icon"></i>
             <input type="email" id="email2"  name="email2"  class="form-control"  required><br> -->
 
             <label for="username" id="usernameLabel">Ingrese un nombre de usuario:</label><br>
-            <i class="bi bi-arrow-right valido"></i>
+            <i class="bi bi-arrow-right  icon" id="icon2"></i>
             <input type="text"  id="username" name="username"  class="form-control"  required><br>
 
             <!-- <label for="username2" id="labelUsername2">Confirme su nombre de usuario:</label><br>
-            <i class="bi bi-arrow-right valido"></i>
+            <i class="bi bi-arrow-right  icon "></i>
             <input type="text"  id="username2" name="username2"  class="form-control"  required><br> -->
 
+            <label for="name" id="passwordLabel">Ingrese una contraseña:</label><br>
+            <i class="bi bi-arrow-right  icon" id="icon5"></i>
+            <input type="password"  id="password"   name="password"  class="form-control"  required><br>
+
             <label for="name" id="nameLabel">Ingrese su nombre:</label><br>
-            <i class="bi bi-arrow-right valido"></i>
+            <i class="bi bi-arrow-right  icon" id="icon3"></i>
             <input type="text"  id="name"   name="name"  class="form-control"  required><br>
 
             <label for="lastName" id="lastNameLabel">Ingrese su apellido:</label><br>
-            <i class="bi bi-arrow-right valido"></i>
+            <i class="bi bi-arrow-right  icon " id="icon4" ></i>
             <input type="text"  id="lastName" name="lastName"  class="form-control" required><br>
 
             <button class="boton-form" id="btnForm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>

@@ -280,8 +280,12 @@ function submit(e) {
 
 
 /*Reducción de velocidad de video de fondo*/
-let video = document.querySelector('video');
-video.defaultPlaybackRate = .3;
-video.load();
+let     videoForm  = d.getElementById("videoForm");
+videoForm.defaultPlaybackRate = .3;
+videoForm.load();
+
 
 console.log(team);
+
+
+

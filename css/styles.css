@@ -21,6 +21,7 @@
     --f-0-max: 21.00;
 
     --text-consola: 'Inconsolata', monospace;
+    --text-login: 'Ubuntu', sans-serif;
 }
 
 /*RESET*/
@@ -46,15 +47,18 @@ body {
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%; }
+    -webkit-text-size-adjust: 100%; 
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+
 h3{
     font-size: 1.7rem;
 }
+
 a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -108,7 +112,7 @@ label{
 
 
 /*Botones*/
-.boton-principal{
+.boton-principal,.boton-ingresar:hover{
     padding: 12px 22px;
     color: var(--color-black);
     background-color: var(--color-principal);
@@ -135,7 +139,22 @@ label{
     color: var(--color-principal);
     cursor: pointer;
 }
-
+.boton-ingresar{
+    padding: 14px;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--color-white);
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: var(--color-secundario);
+    transition: all .3s ease-in-out;
+}
+.boton-ingresar:hover{
+    border: none;
+    font-weight: 600;
+}
 
 /* BANNER */
 .banner{
@@ -150,14 +169,16 @@ label{
     background-color: var(--color-rosa);
 }
 
-.banner a{
-    color: var(--color-black);
+.banner a {
+    color: var(--color-principalHover)  !important;
+    font-weight: 600;
+    text-decoration: underline;
 }
 .banner a:visited{
     color: var(--color-black);
 }
 .banner a:hover{
-    color: var(--color-principalHover);
+    color: var(--color-white) !important;
 }
 
 
@@ -425,24 +446,112 @@ label{
 /* INGRESAR */
 .wrapper__registro{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 64px);
 }
 .wrapper__registro__formulario{
     width: 50%;
     background: white;
 }
-.wrapper__registro__slider{
-    width: 50%;
-}
 .contenedor__formulario{
     margin: 0 auto;
     width: 80%;
+    height: 80%;
     max-width: 452px;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .logo__black{
     height: 50px;
 }
+.wrapper_btn{
+    width: 100%;
+    height: 60px;
+}
+
+#loginForm{
+    font-family: var(--text-consola);
+}
+#loginForm p{
+    font-size: .9rem;
+    color: var(--color-secundario);
+}
+#loginForm a{
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+#loginForm a:hover{
+    color: var(--color-txtForm)
+}
+#loginForm input{
+    margin-top: 0;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    font-size: .7rem;
+    color: var(--color-secundario);
+    background-color: #e8f0fe;
+}
+.wrapper__registro__slider{
+    position: relative;
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+}
+.wrapper__registro__slider video {
+    position: fixed;
+    z-index: -15;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: auto;
+    transform: translateX(calc((100% - 100vw) / 2));
+}
+.wrapper_text_slider{
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0aaf;
+}
+.text_slider{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #e0ff00; */
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+.text_slider .carousel-item p{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 2.7rem;
+    font-family: var(--text-login);
+    font-weight: 500;
+    line-height: 1.3;
+}
+.text_slider .carousel-item span{
+    color: #e5f876;
+}
+.bi-three-dots{
+    font-size: 2.8rem;
+    color: #e5f876;
+
+}
+
+
 
 /*Footer*/
 .footer{

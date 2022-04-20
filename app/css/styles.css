@@ -12,6 +12,7 @@
     --color-black: #000;
     --color-white: #fff;
     --color-txtForm: #627597;
+    --color-background: #1f2023;
 
     --fluid-min-width: 320;
     --fluid-max-width: 1200;
@@ -112,7 +113,7 @@ label{
 
 
 /*Botones*/
-.boton-principal,.boton-ingresar:hover{
+.boton-principal{
     padding: 12px 22px;
     color: var(--color-black);
     background-color: var(--color-principal);
@@ -134,29 +135,15 @@ label{
     background-color: transparent;
     transition: all .6s ease-in-out;
 }
-.boton-form:hover{
-    border: 1px solid var(--color-principal);
-    color: var(--color-principal);
-    cursor: pointer;
+.activado{
+    border: 1px solid var(--color-principalHover);
+    color: var(--color-principalHover);
 }
-.boton-ingresar{
-    margin-top: 80px;
-    padding: 14px;
-    border-radius: 3px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: var(--color-white);
-    font-size: .8rem;
-    font-weight: 600;
-    font-family: var(--text-login);
-    background-color: var(--color-secundario);
-    transition: all .3s ease-in-out;
+.bloqueado{
+	cursor: not-allowed !important;
+	opacity: 60%;
 }
-.boton-ingresar:hover{
-    border: none;
-    font-weight: 600;
-}
+
 
 /* BANNER */
 .banner{
@@ -436,13 +423,6 @@ label{
 
 
 
-/*modal*/
-.modal-title{
-    color: #121212;
-}
-.modal-body{
-    color: #121212;
-}
 
 
 /* INGRESAR */
@@ -478,16 +458,19 @@ label{
     font-size: .9rem;
     color: var(--color-secundario);
 }
-#loginForm a{
-    margin-top: 20px;
+#loginForm #btnPass{
+    margin: 20px auto 0;
+    border: none;
     display: block;
     text-align: center;
     font-weight: 600;
+    font-size: .8rem;
     color: var(--color-secundario);
+    background: transparent;
     text-decoration: underline;
     transition: all .3s ease-in-out;
 }
-#loginForm a:hover{
+#loginForm #btnPass:hover, .wrapper_registrate a:hover{
     color: var(--color-txtForm)
 }
 #loginForm input{
@@ -499,6 +482,49 @@ label{
     color: var(--color-secundario);
     background-color: #e8f0fe;
 }
+#loginForm .boton-ingresar{
+    margin: 30px 0;
+    padding: 14px;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--color-white);
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: var(--text-login);
+    background-color: var(--color-secundario);
+    transition: all .3s ease-in-out;
+}
+#loginForm .boton-ingresar:hover{
+    padding: 12px 22px;
+    border: none;
+    font-weight: 600;
+    color: var(--color-black);
+    background-color: var(--color-principal);
+}
+.loginPass{
+    display: block;
+}
+.close{
+    display: none;
+}
+.wrapper_registrate{
+    margin-top: 60px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: .8rem;
+    color: var(--color-secundario);
+}
+.wrapper_registrate a{
+    color: var(--color-secundario);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
 .wrapper__registro__slider{
     position: relative;
     height: auto;
@@ -614,6 +640,13 @@ label{
 	color: var(--color-principal);
     font-size: .7rem;
     transition: all .3s ease;
+}
+
+
+
+/* PLATAFORMA */
+.body_plataforma{
+    background-color: var(--color-background);
 }
 
 

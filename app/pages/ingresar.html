@@ -46,18 +46,22 @@
                 <form  id="loginForm" name="loginForm" action="#" method="post" accept-charset="utf-8">
                     <div>
                         <p>Usuario</p>
-                        <input id="loginEmail" class="form-control" type="text" name="loginEmail" size="100" placeholder="Ingrese su usuario o mail">
+                        <input id="loginUser" class="form-control" type="text" name="loginUser" size="100" placeholder="Ingresar usuario">
                     </div>
-                    <div>
+                    <div class="loginPass" id="loginPass">
                         <p>Contraseña</p>
-                        <input id="passwordEmail" class="form-control" type="password" name="loginPassword" size="100" placeholder="Ingrese su contraseña">
+                        <input id="loginPassword" class="form-control" type="password" name="loginPassword" size="100" placeholder="Ingresar contraseña">
                     </div>
-                    <a href="">Olvidé mi contraseña</a>
+                    <button href="" type="button" id="btnPass">Olvidé mi contraseña</button>
 
                     <div class="wrapper_btn">
-                        <label type="submit" class="boton-ingresar">Ingresar</label>
+                        <input id="loginBtnSubmit" type="submit" class="boton-ingresar" value="Ingresar"></input>
                     </div>
                 </form>
+
+                <div class="wrapper_registrate">
+                    <span>¿No tienes una cuenta?</span><a href="registro.html">Regístrate</a>
+                </div>
 
                 
             </div>
@@ -108,16 +112,12 @@
 
     </section>
 
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="../js/dbUsers.js" type="module"></script>
+    <script src="../js/helpers/helpers.js" type="module"></script>
+    <script src="../js/data/dbUsers.js" type="module"></script>
+    <script src="../js/singUp.js " type="module" ></script>
+    <script src="../js/singIn.js " type="module" ></script>
     <script src="../js/main.js" type="module"></script>
 </body>
 </html>

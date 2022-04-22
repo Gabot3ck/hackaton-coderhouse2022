@@ -308,32 +308,62 @@ label{
 
 
 /*Jurado*/
+.wrapper_cards_jurado{
+    margin: 0 auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
+    height: 490px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #25d366; */
+}
 .jurado{
     height: 800px;
     background-color: var(--color-secundario);
 }
 .card{
-    color: #121212;
+    width: 350px;
+    max-height: 430px;
+    background: var(--color-secundario);
+    background: -webkit-linear-gradient(to bottom, var(--color-secundario), #121212);
+    background: linear-gradient(to bottom, var(--color-secundario), #202020);
 }
 .card img{
-    margin: 0 auto;
-    width: 350px;
-    height: 350px;
+    margin: 70px auto 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
     display: block;
 
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .card-body h5{
+    font-size: .75rem;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
 .card-body p{
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
     font-size: .7rem;
 }
-.card-body span{
-    margin-left: 10px;
-    font-size: .7rem;
+.card-body .icono_empresa{
+    border-radius: 50px;
+    width: 80%;
+    height: 50px;
+    background-color: var(--color-white);
+}
+.card-body .icono_empresa img{
+    margin: 10px auto;
+    width: 50%;
+    height: 30px;
 }
 
 

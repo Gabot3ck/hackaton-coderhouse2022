@@ -21,9 +21,5 @@ lastUser.forEach(element => {
 userCard.appendChild(div);
 });
 
-console.log(lastUser);
-console.log(myUser);
-
-
-
-
+// console.log(lastUser);
+// console.log(myUser);

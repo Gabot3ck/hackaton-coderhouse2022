@@ -308,6 +308,10 @@ label{
 
 
 /*Jurado*/
+.jurado{
+    height: 800px;
+    background-color: var(--color-secundario);
+}
 .wrapper_cards_jurado{
     margin: 0 auto;
     padding: 30px;
@@ -317,10 +321,6 @@ label{
     display: flex;
     justify-content: space-evenly;
     /* background-color: #25d366; */
-}
-.jurado{
-    height: 800px;
-    background-color: var(--color-secundario);
 }
 .card{
     width: 350px;
@@ -365,6 +365,7 @@ label{
     width: 50%;
     height: 30px;
 }
+
 
 
 /*REGISTRO Y LLENADO DE FORMULARIO*/

@@ -309,18 +309,8 @@ label{
 
 /*Jurado*/
 .jurado{
-    height: 800px;
+    height: 700px;
     background-color: var(--color-secundario);
-}
-.wrapper_cards_jurado{
-    margin: 0 auto;
-    padding: 30px;
-    width: 90%;
-    max-width: 1200px;
-    height: 490px;
-    display: flex;
-    justify-content: space-evenly;
-    /* background-color: #25d366; */
 }
 .card{
     width: 350px;

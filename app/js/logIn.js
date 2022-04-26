@@ -18,13 +18,12 @@ export function submitForm(e) {
     
     if(users == null){
         alert("usuario no existe");
-        
         loginForm.reset();
     } else{
         
         if(users.some(el => el.username == loginUser) && users.some(el => el.password == loginPassword)){
             console.log(users);
-            // localStorage.setItem("lastUser",JSON.stringify(users));
+            localStorage.setItem("lastUser",JSON.stringify(users));
             window.location = "plataforma.html";
             loginForm.reset();
         }else{

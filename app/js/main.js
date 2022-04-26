@@ -6,20 +6,36 @@ const d        = document;
 const userCard = d.getElementById("userCard");
 const lastUser = JSON.parse(localStorage.getItem("lastUser"));
 
-lastUser.forEach(element => {
-    const   div = d.createElement("div");
-    div.classList.add("col");
-    div.innerHTML = `<div class="card">
-                        <img src="../images/usuario.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">${element.username}</h5>
-                            <p>Nombre:</p><span>${element.nombre}</span><br>
-                            <p>Apellido:</p><span>${element.apellido}</span><br>
-                            <p>Email:</p><span>${element.email}</span>
-                        </div>
-                    </div>`;
-userCard.appendChild(div);
-});
+const [usuario] = lastUser;
 
-// console.log(lastUser);
-// console.log(myUser);
+// lastUser.forEach(element => {
+//     const   div = d.createElement("div");
+//     div.classList.add("col");
+//     div.innerHTML = `<div class="card">
+//                         <img src="../images/usuario.png" class="card-img-top" alt="...">
+//                         <div class="card-body">
+//                             <h5 class="card-title">${element.username}</h5>
+//                             <p>Nombre:</p><span>${element.nombre}</span><br>
+//                             <p>Apellido:</p><span>${element.apellido}</span><br>
+//                             <p>Email:</p><span>${element.email}</span>
+//                         </div>
+//                     </div>`;
+// userCard.appendChild(div);
+// });
+
+const   div = d.createElement("div");
+        div.classList.add("col");
+        div.innerHTML = `<div class="card">
+                            <img src="../images/usuario.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${usuario.username}</h5>
+                                <p>Nombre:</p><span>${usuario.nombre}</span><br>
+                                <p>Apellido:</p><span>${usuario.apellido}</span><br>
+                                <p>Email:</p><span>${usuario.email}</span>
+                            </div>
+                        </div>`;
+userCard.appendChild(div);
+
+
+console.log(lastUser);
+console.log(usuario);

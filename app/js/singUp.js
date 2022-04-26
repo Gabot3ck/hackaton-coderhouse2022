@@ -59,18 +59,10 @@ const usernameJury = jury.map(el => el.username);
 const saveUsernames = usernameCompetitor.concat(usernameJury);
 
 
-
-
-
-
-
 //Eventos
 eventListeners();
 function eventListeners(){
-
     addEventListener("DOMContentLoaded", loadedApp);
-
-
     inputEmail.addEventListener("blur",validateEmail);
     inputUserName.addEventListener("blur", validateUsername);
     inputName.addEventListener("blur", validateName);
@@ -78,9 +70,6 @@ function eventListeners(){
     inputPassword.addEventListener("blur", validatePassword);
     form.addEventListener("submit", submit);
 }
-
-
-
 
 
 //Funciones
@@ -101,7 +90,6 @@ function checkClass(icon){
     icon.classList.remove("bi-x-lg");
     icon.classList.add("bi-check-lg");
 }
-
 
 function validateEmail(e) {
     valueEmail = e.target.value;
@@ -145,7 +133,6 @@ function validateEmail(e) {
     }
 }
 
-
 function validateUsername(e){
     valueUsername = e.target.value;
 
@@ -179,16 +166,12 @@ function validate(icon,value,message){
         checkClass(icon);
         activeBtn();
         const error = d.querySelector(".alertMessage");
-        if(error.innerHTML === message){
-            error.remove();
-            // activeBtn();
-        }
+        error.innerHTML === message ? error.remove() : alert("Error en el formulario, revise las casillas");
     } else {
         alertClass(icon);
         alertMessage(message);
     }
 }
-
 
 function validateName(e) {
     valueName = e.target.value;
@@ -204,7 +187,6 @@ function validatePassword(e){
     valuePassword = e.target.value;
     validate(icon5,valuePassword,"Ingrese una constraseña");
 }
-
 
 function activeBtn(){
     if(er.test(valueEmail) && valueUsername !== ""  &&  valuePassword !== ""  && valueName !== "" && valueLastName !== ""){
@@ -229,15 +211,9 @@ function alertMessage(message) {
     }
 }
 
-
-
 function addUsers(){
-    if(newUser.type === "juez"){
-        jury.push(newUser);
-    } else {
-        let competitor = newUser;
-        team.push(competitor);
-    }
+    let competitor = newUser;
+    team.push(competitor);
     totalTeam.push(team)
 }
 
@@ -260,15 +236,5 @@ function submit(e) {
     usernameLocal = newUser.username;
     localStorage.setItem(usernameLocal,JSON.stringify([newUser]));
     form.reset();
-    
     alert("Enviado!");
-    // window.location = "plataforma.HTML"
-    
 }
-
-
-
-
-
-
-console.log(team);

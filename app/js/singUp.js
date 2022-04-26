@@ -7,13 +7,11 @@ import {team, jury, totalTeam} from "./data/dbUsers.js";
 const   d              = document,
         form           = d.getElementById("form"),
         inputEmail     = d.getElementById("email"),
-        inputUserName  = d.getElementById("username"),
         inputName      = d.getElementById("name"),
         inputLastName  = d.getElementById("lastName"),
         inputPassword  = d.getElementById("password"),
         btnForm        = d.getElementById("btnForm"),
         icon1          = d.getElementById("icon1"),
-        icon2          = d.getElementById("icon2"),
         icon3          = d.getElementById("icon3"),
         icon4          = d.getElementById("icon4"),
         icon5          = d.getElementById("icon5");
@@ -22,7 +20,6 @@ const   d              = document,
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 let valueEmail= "",
-    valueUsername = "",
     valueName = "",
     valueLastName = "",
     valuePassword = "",
@@ -36,9 +33,8 @@ let valueEmail= "",
 
 //Creación de Clases
 class User{
-    constructor(type,username,name,lastName,email,password){
+    constructor(type,name,lastName,email,password){
         this.tipo = type;
-        this.username = username;
         this.nombre = name;
         this.apellido = lastName;
         this.email = email;
@@ -53,18 +49,11 @@ const emailJury = jury.map(el => el.email);
 const saveEmails = emailCompetitor.concat(emailJury);
 
 
-//Creando Arrays para almacenar los usernames
-const usernameCompetitor = team.map(el => el.username);
-const usernameJury = jury.map(el => el.username);
-const saveUsernames = usernameCompetitor.concat(usernameJury);
-
-
 //Eventos
 eventListeners();
 function eventListeners(){
     addEventListener("DOMContentLoaded", loadedApp);
     inputEmail.addEventListener("blur",validateEmail);
-    inputUserName.addEventListener("blur", validateUsername);
     inputName.addEventListener("blur", validateName);
     inputLastName.addEventListener("blur", validateLastName);
     inputPassword.addEventListener("blur", validatePassword);
@@ -133,33 +122,6 @@ function validateEmail(e) {
     }
 }
 
-function validateUsername(e){
-    valueUsername = e.target.value;
-
-    switch(valueUsername.length > 0){
-
-        case(!saveUsernames.includes(valueUsername) && saveUsernames != ""):
-            
-            checkClass(icon2);
-            activeBtn();
-            const error = d.querySelector(".alertMessage");
-                    if(error.innerHTML == "Ingrese nombre de usuario!" || error.innerHTML == "Usuario ya existe!"){
-                    error.remove();
-                    checkClass(icon2);
-                    }
-            break;
-
-        case(saveUsernames == ""):
-            alertMessage("Ingrese nombre de usuario!");
-            alertClass(icon2);
-            break;
-
-        case (saveUsernames.includes(valueUsername)):
-            alertMessage("Usuario ya existe!");
-            alertClass(icon2);
-            break;
-    }
-}
 
 function validate(icon,value,message){
     if(value != ""){
@@ -189,7 +151,7 @@ function validatePassword(e){
 }
 
 function activeBtn(){
-    if(er.test(valueEmail) && valueUsername !== ""  &&  valuePassword !== ""  && valueName !== "" && valueLastName !== ""){
+    if(er.test(valueEmail) &&  valuePassword !== ""  && valueName !== "" && valueLastName !== ""){
         btnForm.disabled = false;
         btnForm.classList.remove("bloqueado");
         btnForm.classList.add("activado");
@@ -218,23 +180,23 @@ function addUsers(){
 }
 
 
-let usernameLocal;
+// Creando el nuevo usuario y agregando al Local Storage
+let emailLocal;
 function submit(e) {
     e.preventDefault();
     name += valueName;
     lastName += valueLastName;
-    username += valueUsername;
     email += valueEmail;
     password += valuePassword;
     
-    newUser = new User("participante",username,name,lastName,email,password );
+    newUser = new User("participante",name,lastName,email,password );
 
     saveEmails.push(valueEmail);
-    saveUsernames.push(valueUsername);
     addUsers();
 
-    usernameLocal = newUser.username;
-    localStorage.setItem(usernameLocal,JSON.stringify([newUser]));
+    emailLocal = newUser.email;
+    localStorage.setItem(emailLocal,JSON.stringify([newUser]));
     form.reset();
     alert("Enviado!");
 }
+

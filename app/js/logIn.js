@@ -12,16 +12,16 @@ const   d = document,
 export function submitForm(e) {
     e.preventDefault();
 
-    const   loginUser = d.getElementById("loginUser").value,
+    const   loginEmail = d.getElementById("loginEmail").value,
             loginPassword = d.getElementById("loginPassword").value;
-    const users = JSON.parse(localStorage.getItem(loginUser));
+    const users = JSON.parse(localStorage.getItem(loginEmail));
     
     if(users == null){
         alert("usuario no existe");
         loginForm.reset();
     } else{
         
-        if(users.some(el => el.username == loginUser) && users.some(el => el.password == loginPassword)){
+        if(users.some(el => el.email == loginEmail) && users.some(el => el.password == loginPassword)){
             console.log(users);
             localStorage.setItem("lastUser",JSON.stringify(users));
             window.location = "plataforma.html";

@@ -35,7 +35,3 @@ const   div = d.createElement("div");
                             </div>
                         </div>`;
 userCard.appendChild(div);
-
-
-console.log(lastUser);
-console.log(usuario);

@@ -62,5 +62,5 @@ btnPass.addEventListener("click",()=>{
         })()
 });
 
-localStorage.clear()
+
 

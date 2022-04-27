@@ -3,6 +3,7 @@
 
     --color-principal: #e0ff00;
     --color-principalHover: #ffff00;
+    --color-plataforma: #e5e876;
     --color-secundario: #121212;
     --color-rosa: #ea90ff;
     --color-verde: #25d366;
@@ -23,6 +24,8 @@
 
     --text-consola: 'Inconsolata', monospace;
     --text-login: 'Ubuntu', sans-serif;
+    --text-DMSans: 'DM Sans', sans-serif;
+    --text-Monset: 'Montserrat', sans-serif;
 }
 
 /*RESET*/
@@ -44,7 +47,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: var(--color-secundario);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--text-DMSans);
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -52,7 +55,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--text-Monset);
     font-weight: 700;
 }
 
@@ -62,7 +65,7 @@ h3{
 
 a {
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--text-Monset);
     font-size: .8rem;
     font-weight: 500;
     color: white;
@@ -177,7 +180,7 @@ label{
     position: sticky;
     top: 64px;
     z-index: 998;
-    padding: 10px 50px;
+    padding: 0 50px;
     width: 100%;
     height: 80px;
     display: flex;
@@ -611,20 +614,24 @@ label{
 }
 .nav_plataforma .wrapper_titulo .titulo{
     font-size: 1.5rem;
-    color: var(--color-principal);
+    color: var(--color-white);
 }
-.nav_plataforma .nombre_user{
-    width: 50px;
-    height: 50px;
+.nombre_user{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
 }
-.nav_plataforma #dataUser{
-    font-weight: 600;
-    font-size: 1rem;
+.nav_plataforma .nombre_user:hover{
+    cursor: pointer;
+}
+.data_user{
+    font-family: var(--text-Monset);
+    font-weight: 700;
+    font-size: .9rem;
     color: var(--color-background);
 }
 .nav_plataforma .enlaces ul li a{
@@ -633,6 +640,50 @@ label{
 }
 .nav_plataforma .enlaces ul li a:hover{
     color: var(--color-principal);
+}
+.wrapper_nombre_user{
+    margin: 10px 0;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: #25d366; */
+}
+.modal_data_user{
+    position: absolute;
+    z-index: 800;
+    right: 35px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid var(--color-plataforma);
+    display: none;
+    /* background-color: #c1c1c1; */
+}
+.modal_data_user .modal_header{
+    padding: 15px;
+    border-bottom: 1px solid var(--color-plataforma);
+    width: 100%;
+    height: 100px;
+}
+.modal_data_user:hover{
+    cursor: pointer;
+}
+.background_data{
+    width: 65px;
+    height: 65px;
+}
+.modal_header .background_data .data_user{
+    font-size: 1.15rem;
+}
+.modal_title{
+    font-size: .8rem;
+    font-weight: 600;
+}
+.modal_email{
+    font-size: .6rem;
+    font-weight: 400;
 }
 
 

@@ -197,6 +197,13 @@ function submit(e) {
     emailLocal = newUser.email;
     localStorage.setItem(emailLocal,JSON.stringify([newUser]));
     form.reset();
-    alert("Enviado!");
+    
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Registro con éxito',
+        showConfirmButton: false,
+        timer: 1800
+    })
 }
 

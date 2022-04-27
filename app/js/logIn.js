@@ -17,7 +17,12 @@ export function submitForm(e) {
     const users = JSON.parse(localStorage.getItem(loginEmail));
     
     if(users == null){
-        alert("usuario no existe");
+        Swal.fire({
+            position: 'top-center',
+            icon: 'error',
+            title: '¡Usuario no existe!',
+            showConfirmButton: true,
+        })
         loginForm.reset();
     } else{
         
@@ -27,7 +32,12 @@ export function submitForm(e) {
             window.location = "plataforma.html";
             loginForm.reset();
         }else{
-            alert("Contraseña incorrecta");
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: '¡Contraseña Incorrecta!',
+                showConfirmButton: true,
+            })
         }
     }
 }

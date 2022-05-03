@@ -1,0 +1,38 @@
+[
+    {"type": "jury",
+        "name": "María Fernanda",
+        "lastName": "Herrera",
+        "email": "mf.herrera@coder.com",
+        "password": "Mhcoder2022"
+    },
+    {"type": "jury",
+        "name": "Nicolás",
+        "lastName": "Seguro",
+        "email": "n.seguro@coder.com",
+        "password": "Nscoder2022"
+    },
+    {"type": "jury",
+        "name": "Matías",
+        "lastName": "Hirschmann",
+        "email": "m.hirschmann@coder.com",
+        "password": "Mhcoder2022"
+    },
+    {"type": "jury",
+        "name": "Diana",
+        "lastName": "Ulman",
+        "email": "d.ulman@coder.com",
+        "password": "Ducoder2022"
+    },
+    {"type": "jury",
+        "name": "Martín",
+        "lastName": "Rodriguez",
+        "email": "m.rodriguez@coder.com",
+        "password": "Mrcoder2022"
+    },
+    {"type": "jury",
+        "name": "Cristian",
+        "lastName": "Sánchez",
+        "email": "c.sanchez@coder.com",
+        "password": "Cscoder2022"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {"type": "participante",
+    "name": "Julio",
+    "lastName": "Castro",
+    "email": "julioc88@outlook.com",
+    "password": "1234"
+    },
+    
+    {"type": "participante",
+    "name": "Carlos",
+    "lastName": "Baeza",
+    "email": "carlos.baeza@gmail.com",
+    "password": "1234"
+    },
+
+    {"type": "participante",
+    "name": "Hugo",
+    "lastName": "Paredes",
+    "email": "hparedes@yahoo.com",
+    "password": "1234"
+    },
+
+    {"type": "participante",
+        "name": "Gabriel",
+        "lastName": "Castillo",
+        "email": "gabriel.c@outlook.com",
+        "password": "1234"
+    }
+]

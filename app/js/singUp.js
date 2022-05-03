@@ -1,6 +1,4 @@
-import {team, jury, totalTeam} from "./data/dbUsers.js";
-
-
+// import {team, jury, totalTeam} from "./data/dbUsers.js";
 /* Validación de formulario */
 
 //Variables
@@ -43,10 +41,17 @@ class User{
 }
 
 
-//Creando un Array para almacenar los emails
-const emailCompetitor = team.map(el => el.email);
-const emailJury = jury.map(el => el.email);
-const saveEmails = emailCompetitor.concat(emailJury);
+//Creando un Array  para almacenar los emails
+import { getData } from "./getData.js";
+const users = await getData();
+const emailUsers = users.map(el => el.email);
+
+console.log(emailUsers)
+
+
+// const emailCompetitor = team.map(el => el.email);
+// const emailJury = jury.map(el => el.email);
+// const saveEmails = emailCompetitor.concat(emailJury);
 
 
 //Eventos
@@ -85,7 +90,7 @@ function validateEmail(e) {
 
     switch(valueEmail.length > 0){
 
-        case(!saveEmails.includes(valueEmail) && saveEmails != ""):
+        case(!emailUsers.includes(valueEmail) && valueEmail != ""):
             if (e.target.type === "email") {
 			
                 if (er.test(e.target.value)) {
@@ -103,19 +108,19 @@ function validateEmail(e) {
                     alertMessage("El correo no es válido");
                     }
 
-                if(saveEmails == ""){
+                if(valueEmail == ""){
                     alertMessage("El correo no es válido");
                     alertClass(icon1);
                 }
             }
             break;
 
-        case(saveEmails == ""):
+        case(valueEmail == ""):
             alertMessage("El email no es válido");
             alertClass(icon1);
             break;
 
-        case(saveEmails.includes(valueEmail)):
+        case(emailUsers.includes(valueEmail)):
             alertMessage("Usted ya está registrado!");
             alertClass(icon1);
             break;
@@ -128,7 +133,9 @@ function validate(icon,value,message){
         checkClass(icon);
         activeBtn();
         const error = d.querySelector(".alertMessage");
-        error.innerHTML === message ? error.remove() : alert("Error en el formulario, revise las casillas");
+        if (error.innerHTML === message) {
+            error.remove();
+        }
     } else {
         alertClass(icon);
         alertMessage(message);
@@ -175,13 +182,13 @@ function alertMessage(message) {
 
 function addUsers(){
     let competitor = newUser;
-    team.push(competitor);
-    totalTeam.push(team)
+    users.push(competitor);
 }
 
 
 // Creando el nuevo usuario y agregando al Local Storage
 let emailLocal;
+
 function submit(e) {
     e.preventDefault();
     name += valueName;
@@ -191,7 +198,7 @@ function submit(e) {
     
     newUser = new User("participante",name,lastName,email,password );
 
-    saveEmails.push(valueEmail);
+    emailUsers.push(valueEmail);
     addUsers();
 
     emailLocal = newUser.email;

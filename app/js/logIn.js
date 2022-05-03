@@ -9,7 +9,7 @@ const   d = document,
 
 
 
-export function submitForm(e) {
+function submitForm(e) {
     e.preventDefault();
 
     const   loginEmail = d.getElementById("loginEmail").value,
@@ -61,11 +61,4 @@ btnPass.addEventListener("click",()=>{
         
         })()
 });
-
-
-
-
-// fetch("https://jsonplaceholder.typicode.com/posts")
-//     .then(response => response.json())
-//     .then(data => console.log(data));
 

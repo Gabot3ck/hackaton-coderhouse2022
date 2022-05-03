@@ -31,4 +31,4 @@ const jury = [
 const totalTeam = [];
 
 
-export {team, jury, totalTeam};
+// export {team, jury, totalTeam};

@@ -46,7 +46,6 @@ import { getData } from "./getData.js";
 const users = await getData();
 const emailUsers = users.map(el => el.email);
 
-console.log(emailUsers)
 
 
 // const emailCompetitor = team.map(el => el.email);

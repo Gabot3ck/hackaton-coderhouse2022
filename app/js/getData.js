@@ -7,7 +7,7 @@ const getData = async () => {
         return data;
 
     } catch(error){
-        console.log("hubo un error");
+        console.log("Hubo un error", error);
     }
 
 }

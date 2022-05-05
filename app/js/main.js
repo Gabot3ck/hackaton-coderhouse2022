@@ -1,4 +1,4 @@
-
+import { getData } from "./getData.js";
 
 // Creando la plataforma
 const d        = document;
@@ -8,17 +8,19 @@ const lastUser = JSON.parse(localStorage.getItem("lastUser"));
 const [usuario] = lastUser;
 
 
+
+//Creando un logo con los datos del usuario en el nav
 const   dataUser = d.getElementById("dataUser"),
         iniciales   = d.createElement("p"),
         firstLetter = usuario.nombre.charAt(0),
         secondLetter = usuario.apellido.charAt(0);
-
 iniciales.classList.add("data_user");
 iniciales.innerHTML = `${firstLetter}${secondLetter}`;
 dataUser.appendChild(iniciales);
+/*   - * - * - * - * - * - * - * - * - * - * -   */
 
 
-
+// Creando una modal dinámica para el usuario
 const   wrapperDataUser = d.getElementById("wrapperDataUser"),   
         modal = d.getElementById("modalData");
 
@@ -38,6 +40,7 @@ wrapperDataUser.addEventListener("mouseout", ()=>{
 })
 
 
+//Creando cabecera de la modal
 const   modalHeader = d.getElementById("modalHeader"),
         div2        = d.createElement("div"),
         div3        = d.createElement("div"),
@@ -59,3 +62,30 @@ modalEmail.classList.add("modal_email");
 div3.appendChild(modalTitle);
 div3.appendChild(modalEmail);
 modalHeader.appendChild(div3);
+/*   - * - * - * - * - * - * - * - * - * - * -   */
+
+//Bienvenida dinámica
+const   welcome = d.getElementById("welcome"),
+        txtWelcome      = d.createElement("p");
+        txtWelcome.innerHTML = 
+            `Bienvenido <strong>${usuario.nombre}</strong>, elige uno de los desafíos para participar en la Hackaton Coderhouse 2022.<br>
+            ¡Buena suerte!`;
+        welcome.appendChild(txtWelcome);
+
+//Sección Developers
+const   wrapperDevs = d.getElementById("wrapperDevs");
+    wrapperDevs.innerHTML = "";
+    const   users = await getData();
+    users.forEach(el => {
+        
+        let li = d.createElement("li");
+        if(el.type === "developer"){
+            li.innerHTML = `${el.name} ${el.lastName}`;
+        }
+        
+
+        wrapperDevs.appendChild(li);
+    });
+
+    console.log(users);
+

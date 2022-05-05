@@ -1,5 +1,5 @@
-// import {team, jury, totalTeam} from "./data/dbUsers.js";
-/* Validación de formulario */
+import { alertClass, checkClass, alertMessage, er } from "./functions.js";
+import { getData } from "../getData.js";
 
 //Variables
 const   d              = document,
@@ -15,19 +15,16 @@ const   d              = document,
         icon5          = d.getElementById("icon5");
 
 
-const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 let valueEmail= "",
     valueName = "",
     valueLastName = "",
     valuePassword = "",
-    type = 0,
-    username = "",
     name = "",
     lastName = "",
     email = "",
     password = "",
     newUser = "";
+
 
 //Creación de Clases
 class User{
@@ -41,22 +38,10 @@ class User{
 }
 
 
-//Creando un Array  para almacenar los emails
-import { getData } from "./getData.js";
-const users = await getData();
-const emailUsers = users.map(el => el.email);
 
-
-
-// const emailCompetitor = team.map(el => el.email);
-// const emailJury = jury.map(el => el.email);
-// const saveEmails = emailCompetitor.concat(emailJury);
-
-
-//Eventos
+// *********   E  V  E  N  T  O  S   ********* 
 eventListeners();
 function eventListeners(){
-    addEventListener("DOMContentLoaded", loadedApp);
     inputEmail.addEventListener("blur",validateEmail);
     inputName.addEventListener("blur", validateName);
     inputLastName.addEventListener("blur", validateLastName);
@@ -65,25 +50,12 @@ function eventListeners(){
 }
 
 
-//Funciones
 
-function loadedApp() {
-    btnForm.disabled = true;
-	btnForm.classList.add("bloqueado");
-}
 
-function alertClass(icon) {
-    icon.classList.remove("bi-arrow-right");
-    icon.classList.add("bi-x-lg");
-    
-}
 
-function checkClass(icon){
-    icon.classList.remove("bi-arrow-right");
-    icon.classList.remove("bi-x-lg");
-    icon.classList.add("bi-check-lg");
-}
+//// *********   F  U  N C  I  O  N  E  S   ********* 
 
+//Función validar email al hacer un registro
 function validateEmail(e) {
     valueEmail = e.target.value;
 
@@ -94,7 +66,7 @@ function validateEmail(e) {
 			
                 if (er.test(e.target.value)) {
                     const error = d.querySelector(".alertMessage");
-                    activeBtn()
+                    
                     if(error){
                     error.remove();
                     checkClass(icon1);
@@ -127,35 +99,43 @@ function validateEmail(e) {
 }
 
 
+//Función validar inputs
 function validate(icon,value,message){
     if(value != ""){
         checkClass(icon);
         activeBtn();
-        const error = d.querySelector(".alertMessage");
-        if (error.innerHTML === message) {
+        addEventListener("DOMContentLoaded", ()=>{
+            const error = d.querySelector(".alertMessage");
+            if (error.value === message) {
             error.remove();
-        }
+            }
+        })
+        
     } else {
         alertClass(icon);
         alertMessage(message);
     }
 }
 
+// Funciónpara validar input nombre
 function validateName(e) {
     valueName = e.target.value;
     validate(icon3,valueName,"Ingrese su nombre");
 }
 
+// Funciónpara validar input apellido
 function validateLastName(e) {
     valueLastName = e.target.value;
     validate(icon4,valueLastName,"Ingrese su Apellido");
 }
 
+// Funciónpara validar input contraseña
 function validatePassword(e){
     valuePassword = e.target.value;
     validate(icon5,valuePassword,"Ingrese una constraseña");
 }
 
+//Función para activar el botón del formulario
 function activeBtn(){
     if(er.test(valueEmail) &&  valuePassword !== ""  && valueName !== "" && valueLastName !== ""){
         btnForm.disabled = false;
@@ -168,21 +148,10 @@ function activeBtn(){
     }
 }
 
-function alertMessage(message) {
-    const errorMessage = d.createElement("p");
-	errorMessage.textContent = message;
-	errorMessage.classList.add("error","alertMessage");
-    const errors = d.querySelectorAll(".error");
+//Se crea Array para almacenar emails de los usuarios
+const   users = await getData();
+const   emailUsers = users.map(el => el.email);
 
-    if (errors.length === 0){
-        btnForm.before(errorMessage);
-    }
-}
-
-function addUsers(){
-    let competitor = newUser;
-    users.push(competitor);
-}
 
 
 // Creando el nuevo usuario y agregando al Local Storage
@@ -195,21 +164,27 @@ function submit(e) {
     email += valueEmail;
     password += valuePassword;
     
-    newUser = new User("participante",name,lastName,email,password );
+    newUser = new User("developer",name,lastName,email,password );
 
     emailUsers.push(valueEmail);
-    addUsers();
-
+    users.push(newUser);
     emailLocal = newUser.email;
+
     localStorage.setItem(emailLocal,JSON.stringify([newUser]));
     form.reset();
     
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'success',
         title: 'Registro con éxito',
         showConfirmButton: false,
         timer: 1800
     })
+
+    console.log(users)
 }
+
+
+
+console.log(users);
 

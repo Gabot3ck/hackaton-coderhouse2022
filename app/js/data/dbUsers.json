@@ -41,31 +41,66 @@
         "password": "Cscoder2022"
     },
     
-    {"type": "participante",
+    {"type": "developer",
     "name": "Julio",
     "lastName": "Castro",
     "email": "julioc88@outlook.com",
     "password": "1234"
     },
 
-    {"type": "participante",
+    {"type": "developer",
     "name": "Carlos",
     "lastName": "Baeza",
     "email": "carlos.baeza@gmail.com",
     "password": "1234"
     },
 
-    {"type": "participante",
+    {"type": "developer",
     "name": "Hugo",
     "lastName": "Paredes",
     "email": "hparedes@yahoo.com",
     "password": "1234"
     },
 
-    {"type": "participante",
-        "name": "Gabriel",
+    {"type": "developer",
+        "name": "Juan",
         "lastName": "Castillo",
-        "email": "gabriel.c@outlook.com",
+        "email": "juan.castillo@outlook.com",
+        "password": "1234"
+    },
+
+    {"type": "developer",
+        "name": "Sofía",
+        "lastName": "Paredes",
+        "email": "sofia.p@outlook.com",
+        "password": "1234"
+    },
+
+    {"type": "developer",
+        "name": "Mónica",
+        "lastName": "Gomez",
+        "email": "m.gomez@gmail.com",
+        "password": "1234"
+    },
+
+    {"type": "developer",
+        "name": "Rodrigo",
+        "lastName": "Martínez",
+        "email": "rodrim@gmail.com",
+        "password": "1234"
+    },
+
+    {"type": "developer",
+        "name": "Ivana ",
+        "lastName": "Gambini",
+        "email": "igambi@gmail.com",
+        "password": "1234"
+    },
+
+    {"type": "developer",
+        "name": "Nicolas",
+        "lastName": "Krithz",
+        "email": "nicok@gmail.com",
         "password": "1234"
     }
 ]

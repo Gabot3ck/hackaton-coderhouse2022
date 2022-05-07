@@ -67,10 +67,17 @@ modalHeader.appendChild(div3);
 //Bienvenida dinámica
 const   welcome = d.getElementById("welcome"),
         txtWelcome      = d.createElement("p");
+        txtWelcome.classList.add("mb-4")
         txtWelcome.innerHTML = 
             `Bienvenido <strong>${usuario.nombre}</strong>, elige uno de los desafíos para participar en la Hackaton Coderhouse 2022.<br>
             ¡Buena suerte!`;
         welcome.appendChild(txtWelcome);
+
+
+
+
+
+
 
 //Sección Developers
 const   wrapperDevs = d.getElementById("wrapperDevs");

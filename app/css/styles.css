@@ -686,6 +686,33 @@ label{
     font-weight: 400;
 }
 
+/* Desafíos */
+#challenges{
+    max-width: 1400px;
+}
+#challenges button{
+    border-radius: 5px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+#challenges .modal-footer button{
+    background: var(--color-verde);
+}
+#challenges .card-header{
+    color: var(--color-principal);
+    font-weight: 600;
+    background: transparent;
+}
+#challenges .modal-body{
+    color: var(--color-background);
+}
+#challenges #exampleModalLabel{
+    color: var(--color-secundario);
+}
+#welcome h3{
+    font-size: 1.5rem;
+}
+
 
 
 /*Footer*/

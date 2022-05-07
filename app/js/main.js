@@ -72,27 +72,3 @@ const   welcome = d.getElementById("welcome"),
             `Bienvenido <strong>${usuario.nombre}</strong>, elige uno de los desafíos para participar en la Hackaton Coderhouse 2022.<br>
             ¡Buena suerte!`;
         welcome.appendChild(txtWelcome);
-
-
-
-
-
-
-
-//Sección Developers
-const   wrapperDevs = d.getElementById("wrapperDevs");
-    wrapperDevs.innerHTML = "";
-    const   users = await getData();
-    users.forEach(el => {
-        
-        let li = d.createElement("li");
-        if(el.type === "developer"){
-            li.innerHTML = `${el.name} ${el.lastName}`;
-        }
-        
-
-        wrapperDevs.appendChild(li);
-    });
-
-    console.log(users);
-

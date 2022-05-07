@@ -641,6 +641,7 @@ label{
 .nav_plataforma .enlaces ul li a:hover{
     color: var(--color-principal);
 }
+
 .wrapper_nombre_user{
     margin: 10px 0;
     width: 80px;
@@ -712,6 +713,24 @@ label{
 #welcome h3{
     font-size: 1.5rem;
 }
+
+/*Developers*/
+.wrapperDevs{
+    display: grid;margin: 50px auto;
+    padding: 30px;
+    width: 80vw;
+    max-width: 1300px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    justify-items: center;
+    background-color: rgba(29, 28, 28, 0.89);
+}
+#wrapperDevs img{
+    background-color: white;
+}
+
+
 
 
 

@@ -11,6 +11,11 @@ const   wrapperDevs = d.getElementById("wrapperDevs");
     const devs = users.filter(el => el.type === "developer");
 
 
+    const dot = d.getElementById("dot");
+    const bell = d.getElementById("bell");
+    const modalNotif = d.getElementById("modalNotif");
+
+
     //Se muestran todos los usuarios developers dinamicamente
     bntShow.addEventListener("click", (e)=>{
         e.preventDefault()
@@ -33,14 +38,27 @@ const   wrapperDevs = d.getElementById("wrapperDevs");
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Se envío la invitación a ' + `${el.name} ${el.lastName}`,
+                    title: 'Se envío una invitación a ' + `${el.name} ${el.lastName}`,
                     showConfirmButton: false,
-                    timer: 1800
+                    timer: 1950
                 })
+                const p = d.createElement("p");
+                p.innerHTML = "- Se envío una invitación"
+                p.classList.add("mx-auto")
+                modalNotif.appendChild(p);
+                dot.classList.add("visible");
+            })
+
+                //Se agrega un aviso a la campana de notificaciones
+            bell.addEventListener("click", ()=> {
+                dot.classList.remove("visible");
             })
         });
 
 
     })
 
-            
+    //Se agrega un aviso a la campana de notificaciones
+    bell.addEventListener("click", ()=> {
+        modalNotif.classList.toggle("view");
+    })

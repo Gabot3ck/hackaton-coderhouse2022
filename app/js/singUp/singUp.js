@@ -28,7 +28,8 @@ let valueEmail= "",
 
 //Creación de Clases
 class User{
-    constructor(type,name,lastName,email,password){
+    constructor(id,type,name,lastName,email,password){
+        this.id   = id;
         this.tipo = type;
         this.nombre = name;
         this.apellido = lastName;
@@ -164,7 +165,7 @@ function submit(e) {
     email += valueEmail;
     password += valuePassword;
     
-    newUser = new User("developer",name,lastName,email,password );
+    newUser = new User(16,"developer",name,lastName,email,password );
 
     emailUsers.push(valueEmail);
     users.push(newUser);
@@ -180,11 +181,4 @@ function submit(e) {
         showConfirmButton: false,
         timer: 1800
     })
-
-    console.log(users)
 }
-
-
-
-console.log(users);
-

@@ -18,13 +18,29 @@ const   wrapperDevs = d.getElementById("wrapperDevs");
         devs.forEach(el => {
             const div = d.createElement("div");
             div.classList.add("card");
-            div.setAttribute("id","cardDevs")
+            div.setAttribute("id","cardDevs");
             div.innerHTML = `<img src="../images/usuario.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">${el.name} ${el.lastName}</h5>
-                                    <p class="card-text mb-3">email: ${el.email} </p>
-                                    <a href="#" class="btn btn-warning btn-sm">Invitar</a>
+                                    <h5 type="label" class="card-title">${el.name} ${el.lastName}</h5>
+                                    <p type="label" class="card-text mb-3 ">email: ${el.email} </p>
+                                    <button href="#" class="btn btn-warning btn-sm" id="btnAddDev${el.id}">Invitar</button>
                                 </div>`
             wrapperDevs.appendChild(div);
+
+            //Se agregan los developers a la modal dinámica
+            const btn = d.getElementById(`btnAddDev${el.id}`);
+            btn.addEventListener("click", ()=>{
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Se envío la invitación a ' + `${el.name} ${el.lastName}`,
+                    showConfirmButton: false,
+                    timer: 1800
+                })
+            })
         });
+
+
     })
+
+            

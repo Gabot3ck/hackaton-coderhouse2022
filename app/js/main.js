@@ -62,7 +62,33 @@ modalEmail.classList.add("modal_email");
 div3.appendChild(modalTitle);
 div3.appendChild(modalEmail);
 modalHeader.appendChild(div3);
+
+//Agregando los desafíos dinamicamente al usuario
+const   challenge = d.getElementById("challenge"),
+        btnModalChallg1 = d.getElementById("btnModalChallg1"),
+        btnModalChallg2 = d.getElementById("btnModalChallg2"),
+        btnModalChallg3 = d.getElementById("btnModalChallg3");
+
+
+        btnModalChallg1.addEventListener("click", ()=>{
+            challenge.innerHTML = "Reserva de hora médica";
+        });
+
+        btnModalChallg2.addEventListener("click", ()=>{
+            challenge.innerHTML = "Control de stock";
+        });
+        
+        btnModalChallg3.addEventListener("click", ()=>{
+            challenge.innerHTML = "Optimización de transporte";
+        });
+
+        // function addChallenge(message){
+        //     challenge.innerHTML = message;
+        // }
+
 /*   - * - * - * - * - * - * - * - * - * - * -   */
+
+
 
 //Bienvenida dinámica
 const   welcome = d.getElementById("welcome"),

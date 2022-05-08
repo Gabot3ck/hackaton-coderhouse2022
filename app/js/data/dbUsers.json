@@ -1,106 +1,121 @@
 [
-    {"type": "jury",
-        "name": "María Fernanda",
-        "lastName": "Herrera",
-        "email": "mf.herrera@coder.com",
-        "password": "Mhcoder2022"
+    {"id": 1,
+    "type": "jury",
+    "name": "María Fernanda",
+    "lastName": "Herrera",
+    "email": "mf.herrera@coder.com",
+    "password": "Mhcoder2022"
     },
 
-    {"type": "jury",
-        "name": "Nicolás",
-        "lastName": "Seguro",
-        "email": "n.seguro@coder.com",
-        "password": "Nscoder2022"
+    {"id": 2,
+    "type": "jury",
+    "name": "Nicolás",
+    "lastName": "Seguro",
+    "email": "n.seguro@coder.com",
+    "password": "Nscoder2022"
     },
 
-    {"type": "jury",
-        "name": "Matías",
-        "lastName": "Hirschmann",
-        "email": "m.hirschmann@coder.com",
-        "password": "Mhcoder2022"
+    {"id": 3,
+    "type": "jury",
+    "name": "Matías",
+    "lastName": "Hirschmann",
+    "email": "m.hirschmann@coder.com",
+    "password": "Mhcoder2022"
     },
 
-    {"type": "jury",
-        "name": "Diana",
-        "lastName": "Ulman",
-        "email": "d.ulman@coder.com",
-        "password": "Ducoder2022"
+    {"id": 4,
+    "type": "jury",
+    "name": "Diana",
+    "lastName": "Ulman",
+    "email": "d.ulman@coder.com",
+    "password": "Ducoder2022"
     },
     
-    {"type": "jury",
-        "name": "Martín",
-        "lastName": "Rodriguez",
-        "email": "m.rodriguez@coder.com",
-        "password": "Mrcoder2022"
+    {"id": 5,
+    "type": "jury",
+    "name": "Martín",
+    "lastName": "Rodriguez",
+    "email": "m.rodriguez@coder.com",
+    "password": "Mrcoder2022"
     },
     
-    {"type": "jury",
-        "name": "Cristian",
-        "lastName": "Sánchez",
-        "email": "c.sanchez@coder.com",
-        "password": "Cscoder2022"
+    {"id": 6,
+    "type": "jury",
+    "name": "Cristian",
+    "lastName": "Sánchez",
+    "email": "c.sanchez@coder.com",
+    "password": "Cscoder2022"
     },
     
-    {"type": "developer",
+    {"id": 7,
+    "type": "developer",
     "name": "Julio",
     "lastName": "Castro",
     "email": "julioc88@outlook.com",
     "password": "1234"
     },
 
-    {"type": "developer",
+    {"id": 8,
+    "type": "developer",
     "name": "Carlos",
     "lastName": "Baeza",
     "email": "carlos.baeza@gmail.com",
     "password": "1234"
     },
 
-    {"type": "developer",
+    {"id": 9,
+    "type": "developer",
     "name": "Hugo",
     "lastName": "Paredes",
     "email": "hparedes@yahoo.com",
     "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Juan",
-        "lastName": "Castillo",
-        "email": "juan.castillo@outlook.com",
-        "password": "1234"
+    {"id": 10,
+    "type": "developer",
+    "name": "Juan",
+    "lastName": "Castillo",
+    "email": "juan.castillo@outlook.com",
+    "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Sofía",
-        "lastName": "Paredes",
-        "email": "sofia.p@outlook.com",
-        "password": "1234"
+    {"id": 11,
+    "type": "developer",
+    "name": "Sofía",
+    "lastName": "Paredes",
+    "email": "sofia.p@outlook.com",
+    "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Mónica",
-        "lastName": "Gomez",
-        "email": "m.gomez@gmail.com",
-        "password": "1234"
+    {"id": 12,
+    "type": "developer",
+    "name": "Mónica",
+    "lastName": "Gomez",
+    "email": "m.gomez@gmail.com",
+    "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Rodrigo",
-        "lastName": "Martínez",
-        "email": "rodrim@gmail.com",
-        "password": "1234"
+    {"id": 13,
+    "type": "developer",
+    "name": "Rodrigo",
+    "lastName": "Martínez",
+    "email": "rodrim@gmail.com",
+    "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Ivana ",
-        "lastName": "Gambini",
-        "email": "igambi@gmail.com",
-        "password": "1234"
+    {"id": 14,
+    "type": "developer",
+    "name": "Ivana ",
+    "lastName": "Gambini",
+    "email": "igambi@gmail.com",
+    "password": "1234"
     },
 
-    {"type": "developer",
-        "name": "Nicolas",
-        "lastName": "Krithz",
-        "email": "nicok@gmail.com",
-        "password": "1234"
+    {"id": 15,
+    "type": "developer",
+    "name": "Nicolas",
+    "lastName": "Krithz",
+    "email": "nicok@gmail.com",
+    "password": "1234"
     }
 ]

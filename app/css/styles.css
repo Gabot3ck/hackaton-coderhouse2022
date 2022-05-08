@@ -641,7 +641,7 @@ label{
 .nav_plataforma .enlaces ul li a:hover{
     color: var(--color-principal);
 }
-
+/*Datos de usuario en la nav*/
 .wrapper_nombre_user{
     margin: 10px 0;
     width: 80px;
@@ -652,6 +652,7 @@ label{
     cursor: pointer;
     /* background-color: #25d366; */
 }
+/*Modal de usuario*/
 .modal_data_user{
     position: absolute;
     z-index: 800;
@@ -660,7 +661,7 @@ label{
     height: 400px;
     border: 1px solid var(--color-plataforma);
     display: none;
-    /* background-color: #c1c1c1; */
+    background-color: rgba(27, 27, 4, 0.863);
 }
 .modal_data_user .modal_header{
     padding: 15px;

@@ -98,3 +98,34 @@ const   welcome = d.getElementById("welcome"),
             `Bienvenido <strong>${usuario.nombre}</strong>, elige uno de los desafíos para participar en la Hackaton Coderhouse 2022.<br>
             ¡Buena suerte!`;
         welcome.appendChild(txtWelcome);
+
+
+
+
+        
+//Eliminar registro del de usuario del local storage
+const btnDelete = d.getElementById("btnDelete");
+btnDelete.addEventListener("click", ()=> {
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "La cuenta se eliminará para siempre!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar!'
+    }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Eliminado!',
+                    'Su cuenta fue eliminada.',
+                    'success',
+                )
+                localStorage.clear();
+                setTimeout(()=>{
+                    window.location = "../../index.html";
+                }, 1700);
+                
+            }
+        })
+})

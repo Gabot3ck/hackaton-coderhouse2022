@@ -722,6 +722,11 @@ label{
     display: block;
 }
 
+/*Botón eliminar registro*/
+.wrapper_btnDelete{
+    position: absolute;
+    bottom: 15px;
+}
 
 /* Desafíos */
 #challenges{

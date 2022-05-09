@@ -1,8 +1,5 @@
-import { getData } from "./getData.js";
-
-// Creando la plataforma
+// Trayendo los datos del usuario del Local Storage
 const d        = document;
-const userCard = d.getElementById("userCard");
 const lastUser = JSON.parse(localStorage.getItem("lastUser"));
 
 const [usuario] = lastUser;
@@ -62,6 +59,8 @@ modalEmail.classList.add("modal_email");
 div3.appendChild(modalTitle);
 div3.appendChild(modalEmail);
 modalHeader.appendChild(div3);
+
+
 
 //Agregando los desafíos dinamicamente al usuario
 const   challenge = d.getElementById("challenge"),

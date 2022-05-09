@@ -2,16 +2,15 @@
 const   d = document,
         loginForm   = d.getElementById("loginForm"),
         loginBtn    = d.getElementById("loginBtnSubmit"),
-        btnPassword     = d.getElementById("btnPassword");
+        btnPassword     = d.getElementById("btnPass");
 
         loginForm.addEventListener("submit",submitForm);
 
 
 
-
+//Validando si el usuario está registardo para poder ingresar a la plataforma
 function submitForm(e) {
     e.preventDefault();
-
 
     const   loginEmail = d.getElementById("loginEmail").value,
             loginPassword = d.getElementById("loginPassword").value;
@@ -52,8 +51,8 @@ function submitForm(e) {
 
 
 
-// Email de recuperación de contraseña
-btnPassword.addEventListener("click",()=>{
+// Enviando un Email para recuperación de contraseña
+btnPass.addEventListener("click", ()=> {
     (async () => {
 
         const { value: email } = await Swal.fire({
@@ -67,4 +66,7 @@ btnPassword.addEventListener("click",()=>{
         }
         
         })()
-});
+    
+})
+
+

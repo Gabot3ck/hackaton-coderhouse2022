@@ -81,10 +81,6 @@ const   challenge = d.getElementById("challenge"),
             challenge.innerHTML = "Optimización de transporte";
         });
 
-        // function addChallenge(message){
-        //     challenge.innerHTML = message;
-        // }
-
 /*   - * - * - * - * - * - * - * - * - * - * -   */
 
 

@@ -207,6 +207,9 @@ label{
 .enlaces ul li:last-child a{
     color: var(--color-black);
 }
+.enlaces .login:hover{
+    color: var(--color-principalHover);
+}
 
 
 /*HEADER*/
@@ -358,7 +361,49 @@ label{
     width: 50%;
     height: 30px;
 }
-
+/*Premios*/
+.premios{
+    width: 80%;
+    max-width: 1400px;
+    background-color: rgb(31, 30, 30);
+}
+.premios .wrapper_titulos{
+    margin-bottom: 70px;
+}
+.premios .bi-trophy{
+    font-size: 3.5rem;
+    color: var(--color-parrafos);
+}
+.wrapper_puestos{
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    justify-items: center;
+}
+.wrapper_puestos img{
+    width: 150px;
+    height: 210px;
+}
+.wrapper_puestos .puestos p{
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-parrafos);
+}
+.wrapper_puestos .puestos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.puestos ul li{
+    max-width: 250px;
+    font-size: .8rem;
+    list-style-type: disc;;
+}
 
 
 /*REGISTRO Y LLENADO DE FORMULARIO*/
@@ -770,7 +815,10 @@ label{
     background-color: white;
 }
 
-
+/* PLATAFORMA */
+.body_plataforma{
+    background-color: var(--color-background);
+}
 
 
 
@@ -834,12 +882,3 @@ label{
     font-size: .7rem;
     transition: all .3s ease;
 }
-
-
-
-/* PLATAFORMA */
-.body_plataforma{
-    background-color: var(--color-background);
-}
-
-

@@ -95,10 +95,6 @@ label{
     font-family: var(--text-consola);
     color: var(--color-principal);
 }
-
-.logo{
-    width: 170px;
-}
 .contenedor{
     width: clamp(400px, 60vw, 600px);
 }
@@ -171,7 +167,9 @@ label{
     font-size: .7rem;
     color: var(--color-secundario);
 }
-
+.wrapper_banner .banner .p1{
+    text-align: center;
+}
 .wrapper_banner .banner a {
     color: var(--color-white)  !important;
     font-weight: 600;
@@ -183,7 +181,6 @@ label{
 .wrapper_banner .banner a:hover{
     color: var(--color-principalHover) !important;
 }
-
 
 
 /*MENÚ  DE  NAVEGACIÓN*/
@@ -204,6 +201,9 @@ label{
     justify-content: space-between;
     align-items: center;
 }
+.wrapper_navegacion .navegacion .logo{
+    max-width: 170px;
+}
 .enlaces{
     width: 400px;
     height: 40px;
@@ -216,7 +216,7 @@ label{
 }
 .enlaces ul li{
     margin: 0 10px;
-    width: 150px;
+    max-width: 150px;
     align-content: center;
     text-align: center;
 }
@@ -225,6 +225,17 @@ label{
 }
 .enlaces .login:hover{
     color: var(--color-principalHover);
+}
+@media (min-width:320px) and (max-width:412px){
+    .wrapper_navegacion .navegacion{
+        width: 98vw;
+    }
+    .enlaces ul{
+        justify-content: space-around;
+    }
+    .wrapper_navegacion .enlaces .boton-principal{
+        padding: 10px 14px;
+    }
 }
 
 

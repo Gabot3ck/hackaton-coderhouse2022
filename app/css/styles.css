@@ -895,6 +895,7 @@ label{
 }
 .footer__wrapper{
     margin: 0 auto;
+    width: 98vw;
     max-width: 1200px;
 	height: 130px;
     display: flex;
@@ -910,7 +911,8 @@ label{
 }
 .pie__rrss {
     margin: 0 auto;
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
 	padding: 0 15px;
 	text-align: center;
     align-items: center;

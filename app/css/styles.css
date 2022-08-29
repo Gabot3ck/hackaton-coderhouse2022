@@ -248,19 +248,10 @@ label{
     border-bottom: .5px solid var(--color-parrafos);
     width: 96vw;
     max-width: 1440px;
-    /* 3 */
-    /* height: 80vh;
-    max-height: 750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; */
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(360px, 480px));
-    /* grid-template-areas: 
-        "info   imagen"; */
     color: var(--color-white);
 }
 .header h1{
@@ -283,21 +274,11 @@ label{
 }
 .header .info__header{
     padding-top: 30px;
-    /* width: 55%;
-    height: 85%;
-    max-height: 500px; */
-    /* grid-area: info; */
 }
 .header .info__header p{
     max-width: 702px;
 }
 .header .img__header{
-    /* width: 40%;
-    height: 85%;
-    max-height: 500px;
-    display: flex;
-    align-items: center; */
-    /* grid-area: imagen; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -329,8 +310,7 @@ label{
         "titulos     titulos  "
         "article1    article2 ";
     justify-content: space-evenly;
-    background-color: var(--color-secundario);
-    /* background-color: #25d366;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "; */
+    background-color: var(--color-secundario);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "; */
 }
 .desafios__titulo{
     margin: 20px 0 30px;
@@ -383,7 +363,7 @@ label{
     background-color: var(--color-secundario);
 }
 .card{
-    width: 350px;
+    width: 300px;
     max-height: 430px;
     background: var(--color-secundario);
     background: -webkit-linear-gradient(to bottom, var(--color-secundario), #121212);
@@ -425,6 +405,77 @@ label{
     width: 50%;
     height: 30px;
 }
+
+
+.carousel {
+  position: relative;
+  width: 398px;
+  padding: 10px 40px;
+  border: 1px solid #CCC;
+  border-radius: 15px;
+  background: #eee;
+}
+
+.carousel img {
+  width: 120px;
+  height: 120px;
+  /* establecer block para remover el espacio alrededor de las imágenes */
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  /* background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px; */
+  /* color: #444; */
+  display: block;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.prev {
+  left: 7px;
+}
+
+.next {
+  right: 7px;
+}
+
+.gallery {
+  width: 300px;
+  overflow: hidden;
+}
+
+.gallery ul {
+  height: 350px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  /* eliminando los espacios en blanco entre los li inline-block'ed */
+  /* http://davidwalsh.name/remove-whitespace-inline-block */
+  font-size: 0;
+}
+
+.gallery li {
+  display: inline-block;
+}
+
+
+
 /*Premios*/
 .premios{
     width: 80%;

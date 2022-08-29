@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="app/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="app/images/coder.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="https://res.cloudinary.com/hdsqazxtw/image/upload/v1558445735/android-icon-96x96_oyyy6m.png">
     <link rel="stylesheet" href="app/css/styles.css">
     <title>Hackaton Coderhouse 2022</title>
 </head>
@@ -114,107 +114,102 @@
             <h3>Nuestro jurado</h3>
         </div>
 
-        <div id="containerJurado" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carousel" class="carousel">
 
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="app/images/juez1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">María Fernanda Herrera</h5>
-                                    <p>Director of Product Design</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/rappi.png" alt="">
-                                    </div>
+            <button class="arrow prev">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </button>
+
+            <div class="gallery">
+                <ul>
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">María Fernanda Herrera</h5>
+                                <p>Director of Product Design</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/rappi.png" alt="">
                                 </div>
                             </div>
                         </div>
+                    </li>
+        
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Nicolás Seguro</h5>
+                                <p>Web UI Sr Advance</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/globant.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                         
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="app/images/juez2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nicolás Seguro</h5>
-                                    <p>Web UI Sr Advance</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/globant.png" alt="">
-                                    </div>
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Matías Hirschmann</h5>
+                                <p>Chief Marketing Officer (CMO)</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/banco-ciudad.png" alt="">
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="app/images/juez3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Matías Hirschmann</h5>
-                                    <p>Chief Marketing Officer (CMO)</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/banco-ciudad.png" alt="">
-                                    </div>
+                    </li>
+        
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Diana Ulman</h5>
+                                <p> Digital Marketing Manager</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/globant.png" alt="">
                                 </div>
                             </div>
                         </div>
-                    
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-3" >
-                            <div class="card h-100">
-                                <img src="app/images/juez4.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Diana Ulman</h5>
-                                    <p>Marketing Automation Practice Lead</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/globant.png" alt="">
-                                    </div>
+                    </li>
+        
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Martín Rodriguez</h5>
+                                <p>UX Writer</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/mercadolibre.png" alt="">
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-3" >
-                            <div class="card h-100">
-                                <img src="app/images/juez5.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Martín Rodriguez</h5>
-                                    <p>UX Writer</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/mercadolibre.png" alt="">
-                                    </div>
+                    </li>
+        
+                    <li>
+                        <div class="card h-100">
+                            <img src="app/images/juez6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cristian Sánchez</h5>
+                                <p>Product Analyst</p>
+                                <div class="icono_empresa">
+                                    <img src="app/images/uala.png" alt="">
                                 </div>
                             </div>
                         </div>
-                    
-                        <div class="col-3" >
-                            <div class="card h-100">
-                                <img src="app/images/juez6.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cristian Sánchez</h5>
-                                    <p>Product Analyst</p>
-                                    <div class="icono_empresa">
-                                        <img src="app/images/uala.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                
+                    </li>
+                </ul>
             </div>
-    
-            <button class="carousel-control-prev" type="button" data-bs-target="#containerJurado" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            <button class="arrow next">
+                <i class="bi bi-arrow-right-circle-fill"></i>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#containerJurado" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+
         </div>
+
     </section>
+    
     <!-- FIN  SECCIÓN JURADO CALIFICADOR -->
 
 
@@ -276,5 +271,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="app/js/carousel.js"></script>
 </body>
 </html>

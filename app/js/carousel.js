@@ -12,6 +12,7 @@ carousel.querySelector('.prev').onclick = function() {
     position += width * count;
   // no podemos mover demasiado a la izquierda, se acaban las imágenes
     position = Math.min(position, 0)
+    console.log(position)
     list.style.marginLeft = position + 'px';
 };
 
@@ -19,6 +20,10 @@ carousel.querySelector('.next').onclick = function() {
   // desplazamiento derecho
     position -= width * count;
   // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
-    position = Math.max(position, -width * (listElems.length - count));
-    list.style.marginLeft = position + 'px';
+    
+    position = Math.max(position, -width * (listElems.length - count -2));
+    console.log(position)
+    if(position >= -900){
+      list.style.marginLeft = position + 'px';
+    }
 };

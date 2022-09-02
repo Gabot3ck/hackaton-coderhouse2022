@@ -362,117 +362,105 @@ label{
     height: 700px;
     background-color: var(--color-secundario);
 }
-.card{
-    width: 300px;
+
+.carousel {
+    padding: 0 20px;
+    width: 1080px;
+    height: 370px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+.arrow {
+    padding: 0;
+    border: none;
+    display: block;
+    background-color: transparent;
+}
+.arrow:focus {
+    outline: none;
+}
+.arrow:hover {
+    cursor: pointer;
+}
+.prev {
+    left: 7px;
+}
+.next {
+    right: 7px;
+}
+.bi-arrow-left-circle-fill,
+.bi-arrow-right-circle-fill{
+    color: var(--color-parrafos);
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+}
+.bi-arrow-left-circle-fill:hover,
+.bi-arrow-right-circle-fill:hover{
+    color: var(--color-principal);
+}
+.gallery {
+    width: 900px;
+    height: 330px;
+    overflow: hidden;
+}
+.gallery ul {
+    height: 350px;
+    width: 1800px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms ease-in;
+    font-size: 0;
+}
+.gallery li {
+    display: inline-block;
+}
+.carousel .card{
+    margin: 0 10px;
+    width: 280px;
     max-height: 430px;
     background: var(--color-secundario);
     background: -webkit-linear-gradient(to bottom, var(--color-secundario), #121212);
     background: linear-gradient(to bottom, var(--color-secundario), #202020);
 }
-.card img{
-    margin: 70px auto 0;
+.carousel .card img{
+    margin: 60px auto 0;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     display: block;
-
 }
-.card-body{
+.carousel .card-body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.card-body h5{
+.carousel .card-body h5{
     font-size: .75rem;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
-.card-body p{
+.carousel .card-body p{
     display: inline-block;
     font-weight: 500;
     font-size: .7rem;
 }
-.card-body .icono_empresa{
+.carousel .card-body .icono_empresa{
     border-radius: 50px;
     width: 80%;
     height: 50px;
     background-color: var(--color-white);
 }
-.card-body .icono_empresa img{
+.carousel .card-body .icono_empresa img{
     margin: 10px auto;
     width: 50%;
     height: 30px;
 }
 
-
-.carousel {
-  position: relative;
-  width: 398px;
-  padding: 10px 40px;
-  border: 1px solid #CCC;
-  border-radius: 15px;
-  background: #eee;
-}
-
-.carousel img {
-  width: 120px;
-  height: 120px;
-  /* establecer block para remover el espacio alrededor de las imágenes */
-  display: block;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  padding: 0;
-  /* background: #ddd;
-  border-radius: 15px;
-  border: 1px solid gray;
-  font-size: 24px;
-  line-height: 24px; */
-  /* color: #444; */
-  display: block;
-}
-
-.arrow:focus {
-  outline: none;
-}
-
-.arrow:hover {
-  background: #ccc;
-  cursor: pointer;
-}
-
-.prev {
-  left: 7px;
-}
-
-.next {
-  right: 7px;
-}
-
-.gallery {
-  width: 300px;
-  overflow: hidden;
-}
-
-.gallery ul {
-  height: 350px;
-  width: 9999px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transition: margin-left 250ms;
-  /* eliminando los espacios en blanco entre los li inline-block'ed */
-  /* http://davidwalsh.name/remove-whitespace-inline-block */
-  font-size: 0;
-}
-
-.gallery li {
-  display: inline-block;
-}
 
 
 
